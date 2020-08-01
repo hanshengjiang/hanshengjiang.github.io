@@ -52,19 +52,19 @@ html {
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 0.96rem;
+    font-size: 1rem;
   }
 }
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 1.12rem;
+    font-size: 1.22rem;
   }
 }
 
 @include media-breakpoint-up(lg) {
   html {
-    font-size: 1.28rem;
+    font-size: 1.38rem;
   }
 }
 
