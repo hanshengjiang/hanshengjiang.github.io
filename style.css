@@ -83,6 +83,11 @@ font-size: 1.8rem !important;
   height: auto;
 }
 
+.chinese {
+  font-family: "STKaiTi";
+}
+
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
