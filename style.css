@@ -47,24 +47,24 @@
 
 
 html {
-  font-size: 1.5rem;
+  font-size: 0.9rem;
 }
 
 @include media-breakpoint-up(sm) {
   html {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
 @include media-breakpoint-up(md) {
   html {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
 @include media-breakpoint-up(lg) {
   html {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -73,7 +73,7 @@ html {
 }
 
 .navbar-nav {
-font-size: 2rem !important;
+font-size: 1.8rem !important;
 }
 
 /* responsive images */
