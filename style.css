@@ -87,6 +87,10 @@ font-size: 1.8rem !important;
   font-family: "STKaiTi";
 }
 
+.lead {
+  font-weight: 400;
+}
+
 
 
 /* Sticky footer styles
