@@ -44,7 +44,8 @@
 .top100 { margin-top:100px; }
 .bot10 { margin-bottom:10px;} 
 .bot20 { margin-bottom:20px; }
-
+.bot100 { margin-bottom:100px;} 
+.bot200 { margin-bottom:200px; }
 
 html {
   font-size: 0.9rem;
