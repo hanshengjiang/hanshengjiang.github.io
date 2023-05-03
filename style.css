@@ -98,21 +98,25 @@ font-size: 1.8rem !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Times New Roman", Times, serif;
+/*  font-family: "Times New Roman", Times, serif;*/
+  font-weight: 400;
 }
 
 a {
-  font-family: "Times New Roman", Times, serif;
+/*  font-family: "Times New Roman", Times, serif;*/
+  font-weight: 400;
 }
+
 
 .lead {
   font-family: "Times New Roman", Times, serif;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .abstract-text{
   font-family: "Times New Roman", Times, serif;
-  font-size:16px;
+  font-size: 16px;
 }
 
 
