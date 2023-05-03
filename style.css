@@ -84,17 +84,35 @@ font-size: 1.8rem !important;
   height: auto;
 }
 
+
+.boldlink {
+  color: #0070c9;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
 .chinese {
   font-family: "KaiTi";
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+a {
+  font-family: "Times New Roman", Times, serif;
+}
+
 .lead {
-  font-weight: 430;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
 }
 
 .abstract-text{
   font-family: "Times New Roman", Times, serif;
-  font-size:19px;
+  font-size:16px;
 }
 
 
