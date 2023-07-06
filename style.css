@@ -130,6 +130,16 @@ p {
   display: none;
 }
 
+#toggleLink {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

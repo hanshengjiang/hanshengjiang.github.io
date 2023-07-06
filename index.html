@@ -33,16 +33,16 @@
 <script>
         function toggleUpdates() {
             var updates = document.getElementsByClassName('older-update');
-            var button = document.getElementById('toggleButton');
+            var button = document.getElementById('toggleLink');
 
             for (var i = 0; i < updates.length; i++) {
                 var update = updates[i];
                 if (update.classList.contains('hidden')) {
                     update.classList.remove('hidden');
-                    button.textContent = 'Show Less';
+                    button.textContent = '[Show Less]';
                 } else {
                     update.classList.add('hidden');
-                    button.textContent = 'Show More';
+                    button.textContent = '[Show More]';
                 }
             }
         }
@@ -160,7 +160,7 @@
       </li>
     </ul>
 
-        <button id="toggleButton" class="btn btn-outline-primary mt-3" onclick="toggleUpdates()">Show More</button>
+        <button id="toggleLink" class="btn btn-link mt-3" onclick="toggleUpdates()"> [Show More] </button>
     </div>
 
   </div>
