@@ -32,6 +32,7 @@
     max-width: 100%;
 }
 
+
 .top2 { margin-top:2px; }
 .top5 { margin-top:5px; }
 .top7 { margin-top:7px; }
@@ -125,6 +126,9 @@ p {
   font-size: 16px;
 }
 
+.hidden {
+  display: none;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */
