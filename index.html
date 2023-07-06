@@ -28,24 +28,31 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="icons/h_pink_favicon.ico">
 
-
-    
 <script>
-        function toggleUpdates() {
-            var updates = document.getElementsByClassName('older-update');
-            var button = document.getElementById('toggleLink');
+    window.addEventListener('DOMContentLoaded', function () {
+        var updates = document.getElementsByClassName('older-update');
 
-            for (var i = 0; i < updates.length; i++) {
-                var update = updates[i];
-                if (update.classList.contains('hidden')) {
-                    update.classList.remove('hidden');
-                    button.textContent = '[Show Less]';
-                } else {
-                    update.classList.add('hidden');
-                    button.textContent = '[Show More]';
-                }
+        for (var i = 0; i < updates.length; i++) {
+            var update = updates[i];
+            update.classList.add('hidden');
+        }
+    });
+
+    function toggleUpdates() {
+        var updates = document.getElementsByClassName('older-update');
+        var button = document.getElementById('toggleLink');
+
+        for (var i = 0; i < updates.length; i++) {
+            var update = updates[i];
+            if (update.classList.contains('hidden')) {
+                update.classList.remove('hidden');
+                button.textContent = '[Show Less]';
+            } else {
+                update.classList.add('hidden');
+                button.textContent = '[Show More]';
             }
         }
+    }
 </script>
 
 
@@ -147,18 +154,49 @@
     <hr>
 
   <h4>
-   Updates
+   News
   </h4>
     <ul>
-      <li> <span class = "lead" > Jan 2023 &nbsp;&nbsp; Excited to teach as an instructor for the first time! Welcome to <a href = "https://classes.berkeley.edu/content/2023-spring-stat-153-001-lec-001" target = "_blank"> STAT 153</a>: Introduction to Time Series.</span>
-      <li> <span class = "lead" > Dec 2022 &nbsp;&nbsp; New <a href = "https://deliverypdf.ssrn.com/delivery.php?ID=729001022114012023090102087029021094026006014001084049030126087018119067064105093099122024127099030044044009006113115107069106021029063058010101120029107023080076072007013054085124113119074121119123104081019072081101107088013097022082091010072112006119&EXT=pdf&INDEX=TRUE" target = "_blank">manuscript</a> Learning While Repositioning in On-Demand Vehicle Sharing Networks  is posted on SSRN!
-      <li><span class  = "lead" > Oct 2022 &nbsp;&nbsp; Our <a href="https://ieeexplore.ieee.org/document/9996622" target="_blank">paper </a>Quantum Computing Methods for Supply Chain Management is published on the Proceeding of 2022 IEEE/ACM 7th Symposium on Edge Computing - Workshop on Quantum Computing!       </span></li>
-  
-      <li class="older-update">
-        <span class="lead">Aug 2022 &nbsp;&nbsp; I won a prize in the flash talk competition at <a href="https://yinzor.cmuinforms.org/" target="_blank">YinzOR 2022</a> held by Carnegie Mellon University!
-        </span>
-      </li>
+      <li>
+            <span class="lead date">June 2023</span>
+            <span class="lead content">
+                Honored to receive the Second Place in Doctoral Dissertation Award Competition, Conference on SCM in the Post-Pandemic and AI Age.
+            </span>
+        </li>
+
+      <li>
+            <span class="lead date">Jan 2023</span>
+            <span class="lead content">Excited to teach as an instructor for the first time! Welcome to
+                <a href="https://classes.berkeley.edu/content/2023-spring-stat-153-001-lec-001" target="_blank">STAT 153</a>:
+                Introduction to Time Series.
+            </span>
+        </li>
+
+        <li>
+            <span class="lead date">Dec 2022</span>
+            <span class="lead content">New
+                <a href="https://deliverypdf.ssrn.com/delivery.php?ID=729001022114012023090102087029021094026006014001084049030126087018119067064105093099122024127099030044044009006113115107069106021029063058010101120029107023080076072007013054085124113119074121119123104081019072081101107088013097022082091010072112006119&EXT=pdf&INDEX=TRUE"
+                    target="_blank">manuscript</a> Learning While Repositioning in On-Demand Vehicle Sharing Networks is posted on SSRN!
+            </span>
+        </li>
+
+        <li class="older-update">
+            <span class="lead date">Oct 2022</span>
+            <span class="lead content">Our
+                <a href="https://ieeexplore.ieee.org/document/9996622" target="_blank">paper</a> Quantum Computing Methods for Supply Chain
+                Management is published on the Proceeding of 2022 IEEE/ACM 7th Symposium on Edge Computing - Workshop on Quantum Computing!
+            </span>
+        </li>
+
+        <li class="older-update">
+            <span class="lead date">Aug 2022</span>
+            <span class="lead content">I won a prize in the flash talk competition at
+                <a href="https://yinzor.cmuinforms.org/" target="_blank">YinzOR 2022</a> held by Carnegie Mellon University!
+            </span>
+        </li>
+      
     </ul>
+
 
     <button id="toggleLink" class="btn btn-link mt-3" onclick="toggleUpdates()"> [Show More] </button>
     </div>

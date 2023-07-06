@@ -131,7 +131,7 @@ p {
 }
 
 #toggleLink {
-  color: black;
+  /*color: black;*/
   text-decoration: none;
   background-color: transparent;
   border: none;
@@ -139,6 +139,18 @@ p {
   font: inherit;
   cursor: pointer;
 }
+
+.date {
+    display: inline-block;
+    color:Gray;
+    width: 100px; /* Adjust the width as needed */
+    margin-right: 0px; /* Adjust the margin as needed */
+}
+
+.content {
+    margin-left: 0px; /* Adjust the margin as needed */
+}
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
