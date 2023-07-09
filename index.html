@@ -46,10 +46,10 @@
             var update = updates[i];
             if (update.classList.contains('hidden')) {
                 update.classList.remove('hidden');
-                button.textContent = '[Show Less]';
+                button.textContent = 'READ LESS';
             } else {
                 update.classList.add('hidden');
-                button.textContent = '[Show More]';
+                button.textContent = 'READ MORE +';
             }
         }
     }
@@ -198,7 +198,7 @@
     </ul>
 
 
-    <button id="toggleLink" class="btn btn-link mt-3" onclick="toggleUpdates()"> [Show More] </button>
+    <button id="toggleLink" class="btn btn-link mt-3" onclick="toggleUpdates()"> READ MORE + </button>
     </div>
 
   </div>
