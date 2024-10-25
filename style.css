@@ -33,6 +33,56 @@
 }
 
 
+/* Updated container-medium styles */
+@media (min-width: 768px) {
+    .container-medium {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: 992px) {
+    .container-medium {
+        width: 970px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: 1200px) {
+    .container-medium {
+        width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media (min-width: 1400px) {
+    .container-medium {
+        width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+@media (min-width: 1600px) {
+    .container-medium {
+        width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+/* Update the col-md-8 inside container-medium for better positioning */
+.container-medium.col-md-8 {
+    float: none;
+    padding-left: 120px;
+    padding-right: 15px;
+}
+
 .top2 { margin-top:2px; }
 .top5 { margin-top:5px; }
 .top7 { margin-top:7px; }
