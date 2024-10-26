@@ -76,11 +76,27 @@
     }
 }
 
-/* Update the col-md-8 inside container-medium for better positioning */
+/* Base mobile-first style */
 .container-medium.col-md-8 {
     float: none;
-    padding-left: 120px;
+    padding-left: 15px;
     padding-right: 15px;
+}
+
+/* Medium screens and up */
+@media (min-width: 992px) {
+    .container-medium.col-md-8 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .container-medium.col-md-8 {
+        padding-left: 110px;
+        padding-right: 40px;
+    }
 }
 
 .top2 { margin-top:2px; }
