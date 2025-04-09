@@ -236,4 +236,71 @@ body {
   background-color: #f5f5f5;
 }
 
+/* Button styles */ 
+/*-------------------------------------------------- */
+.btn-abstract {
+  background-color: #E0F2F1; 
+  color: #004D40;
+  border: 1px solid #004D40;
+}
 
+.btn-pdf {
+  background-color: #FDEDEC; 
+  color: #C0392B;
+  border: 1px solid #C0392B;
+}
+
+.btn-slides {
+  background-color: #FFF2E0; 
+  color: #BF6900;
+  border: 1px solid #BF6900;
+}
+
+.btn-code {
+  background-color: #EAFAF1; 
+  color: #1D8348;
+  border: 1px solid #1D8348;
+}
+
+.btn-data {
+  background-color: #F5EEFC; 
+  color: #6C3483;
+  border: 1px solid #6C3483;
+}
+
+.btn-journal {
+  background-color: #CCECFF; 
+  color: #004B80;
+  border: 1px solid #004B80;
+}
+
+.btn-proceeding {
+  background-color: #FFF8E1;
+  color: #6B4F00;
+  border: 1px solid #6B4F00;
+}
+
+.btn-arxiv {
+  background-color: #FAE0E0; 
+  color: #9B3B3B;
+  border: 1px solid #9B3B3B;
+}
+
+.btn-ssrn {
+  background-color: #D2E3FA; 
+  color: #1D2E50;
+  border: 1px solid #1D2E50;
+}
+
+.btn-code{
+  background-color: #F8F9FA;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.btn-misc {
+  background-color: #fae095; 
+  color: #4A3700;
+  border: 1px solid #4A3700;
+}
+/* End of Button styles */
