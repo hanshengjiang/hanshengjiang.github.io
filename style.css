@@ -173,7 +173,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 a {
-  font-weight: 200;
+  color: #3F88C5; /* Brighter navy-blue */
+}
+a:hover {
+  color: #2F4E75; /* Slightly darker on hover */
 }
 
 
@@ -302,5 +305,12 @@ body {
   background-color: #fae095; 
   color: #4A3700;
   border: 1px solid #4A3700;
+}
+
+.btn-link {
+  color: #3F88C5 !important;
+}
+.btn-link:hover {
+  color: #2F4E75 !important;
 }
 /* End of Button styles */
