@@ -241,10 +241,17 @@ body {
 
 /* Button styles */ 
 /*-------------------------------------------------- */
-.btn-abstract {
-  background-color: #E0F2F1; 
-  color: #004D40;
-  border: 1px solid #004D40;
+
+.btn-code {
+  background-color: #EAFAF1; 
+  color: #1D8348;
+  border: 1px solid #1D8348;
+}
+
+.btn-abstract{
+  background-color: #F8F9FA;
+  color: #333;
+  border: 1px solid #333;
 }
 
 .btn-pdf {
@@ -257,12 +264,6 @@ body {
   background-color: #FFF2E0; 
   color: #BF6900;
   border: 1px solid #BF6900;
-}
-
-.btn-code {
-  background-color: #EAFAF1; 
-  color: #1D8348;
-  border: 1px solid #1D8348;
 }
 
 .btn-data {
@@ -295,11 +296,6 @@ body {
   border: 1px solid #1D2E50;
 }
 
-.btn-code{
-  background-color: #F8F9FA;
-  color: #333;
-  border: 1px solid #333;
-}
 
 .btn-misc {
   background-color: #fae095; 
