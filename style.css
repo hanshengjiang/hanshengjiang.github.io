@@ -249,9 +249,9 @@ body {
 }
 
 .btn-abstract{
-  background-color: #F8F9FA;
-  color: #333;
-  border: 1px solid #333;
+  background-color: #EAF0F8; 
+  color: #2C4B60;
+  border: 1px solid #2C4B60;
 }
 
 .btn-pdf {
@@ -285,7 +285,7 @@ body {
 }
 
 .btn-arxiv {
-  background-color: #FAE0E0; 
+  background-color: #FBE5E5; 
   color: #9B3B3B;
   border: 1px solid #9B3B3B;
 }
