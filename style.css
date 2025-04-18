@@ -313,8 +313,8 @@ a:hover {
 /* End of Button styles */
 
 b, strong {
-  color: #777;
-  font-weight: 500; /* Change to your desired weight */
+  color: black;
+  font-weight: 700; /* Change to your desired weight */
 }
 
 .paper-title-link {
