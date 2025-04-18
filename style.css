@@ -137,14 +137,29 @@ html {
 }
 
 .round_more {
-  border-radius: 18%;s
+  border-radius: 18%;
 }
 
 .navbar-nav {
-  font-size: 2rem !important;
+  font-size: 1.6rem !important;
   font-weight: 200 !important;
 }
 
+/* Add these rules for nav link colors */
+.navbar-nav .nav-link {
+  color: #3F88C5 !important; /* Default link blue */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #004B80 !important; /* Hover link blue */
+}
+
+/* Ensure active link also uses the default blue */
+.navbar-nav .nav-link.active {
+   color: #777 !important;
+   /* Bootstrap might make active links bolder, uncomment below if you want to force the light weight */
+   /* font-weight: 100 !important; */
+}
 
 /* responsive images */
 .responsive {
@@ -207,7 +222,7 @@ p {
 
 .date {
     display: inline-block;
-    color:Gray;
+    color: #777;
     width: 100px; /* Adjust the width as needed */
     margin-right: 0px; /* Adjust the margin as needed */
 }
