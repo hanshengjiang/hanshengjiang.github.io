@@ -141,7 +141,8 @@ html {
 }
 
 .navbar-nav {
-font-size: 1.8rem !important;
+  font-size: 2rem !important;
+  font-weight: 200 !important;
 }
 
 
@@ -171,13 +172,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
 }
 
-
-a {
-  color: #3F88C5; /* Brighter navy-blue */
-}
-a:hover {
-  color: #2F4E75; /* Slightly darker on hover */
-}
 
 
 p {
@@ -296,7 +290,6 @@ body {
   border: 1px solid #1D2E50;
 }
 
-
 .btn-misc {
   background-color: #fae095; 
   color: #4A3700;
@@ -307,6 +300,28 @@ body {
   color: #3F88C5 !important;
 }
 .btn-link:hover {
-  color: #2F4E75 !important;
+  color: #004B80 !important;
 }
+
+a {
+  color: #3F88C5; /* Brighter navy-blue */
+}
+a:hover {
+  color: #004B80; /* Slightly darker on hover */
+}
+
 /* End of Button styles */
+
+b, strong {
+  color: #777;
+  font-weight: 500; /* Change to your desired weight */
+}
+
+.paper-title-link {
+  color: black; /* Change to your desired color */
+  font-weight: 400; /* Apply your desired weight */
+}
+.paper-title-link:hover {
+  font-weight: 400; /* Apply your desired weight */
+}
+
