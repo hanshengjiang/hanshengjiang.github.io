@@ -344,46 +344,5 @@ b, strong {
 
 /* style.css */
 
-/* --- Adjustments for Footer Layout --- */
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #f5f5f5;
-}
-
-.footer .container-medium {
-  display: flex;
-  align-items: center;          /* Vertically center all items in the container */
-  height: 100%;                 /* Ensures the container takes the full footer height */
-  width: 100%;                  /* Ensures spacers can distribute width correctly */
-  /* justify-content: space-between; */ /* Remove this, as spacing is handled by flex-grow */
-}
-
-.footer-spacer-left {
-  flex-grow: 1; /* Takes up available space on the left */
-}
-
-.footer-copyright {
-  flex-shrink: 0; /* Prevents the copyright text from shrinking */
-  /* The text itself will be centered between the two growing spacers */
-}
-
-.footer-spacer-right-with-badge {
-  flex-grow: 1; /* Takes up available space on the right */
-  display: flex;
-  justify-content: flex-end; /* Aligns the badge to the far right of this spacer */
-  align-items: center; /* Vertically centers the badge within this spacer */
-}
-
-.footer-badge {
-  display: flex; /* This was from the previous solution and is still good */
-  align-items: center; /* Helps to center the badge content, especially with scaling */
-}
-
-/* --- End of Adjustments for Footer Layout --- */
-
 
 
