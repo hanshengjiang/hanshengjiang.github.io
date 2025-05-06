@@ -350,33 +350,7 @@ b, strong {
 
 /* style.css */
 
-/* Make the overall badge container smaller and control alignment */
-#wcb {
-    transform: scale(0.8); /* Scale down the badge to 80% of its original size */
-    transform-origin: center bottom; /* Adjust origin if scaling makes it misaligned */
-    display: inline-block; /* ensure it behaves as expected in the flex container */
-    vertical-align: middle; /* Helps align with text if it's next to any */
-    /* Add more specific width/height if needed, but scaling is often easier */
-    /* max-width: 150px; /* Example: constrain max width */
-}
 
-/* If the text within the badge is too large */
-#wcb span, #wcb a {
-    font-size: 0.8em !important; /* Reduce font size within the badge. Use !important if necessary, but try without first */
-}
-
-/* Adjust the footer flex container to better align items if badge causes issues */
-.footer .container {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* This should vertically center items */
-    gap: 0.5rem;
-}
-
-/* Ensure copyright text and badge align nicely on the same line */
-.footer .text-muted, .footer #wcb {
-    line-height: 1; /* Adjust if vertical alignment is off */
-}
 
 
 
