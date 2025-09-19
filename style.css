@@ -189,7 +189,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 p {
   font-weight: 400;
 }
@@ -328,6 +327,12 @@ a:hover {
 
 /* End of Button styles */
 
+
+/* Award styles in Research Page */
+.award-text {
+  /* color: #8B0000;  Change to your desired color */
+  font-size: 14px;
+}
 
 /* Paper styles in Research Page */
 
