@@ -194,13 +194,13 @@ p {
 }
 
 .lead {
-  font-family: Arial, Helvetica, sans-serif;
+  /*  font-family: Arial, Helvetica, sans-serif; */
   font-weight: 400;
   font-size: 16px;
 }
 
 .abstract-text{
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   font-weight: 400;
   font-size: 16px;
 }
@@ -294,9 +294,9 @@ body {
 }
 
 .btn-arxiv {
-  background-color: #FBE5E5; 
-  color: #9B3B3B;
-  border: 1px solid #9B3B3B;
+  background-color: #FEF7F7; 
+  color: #CD5C5C;
+  border: 1px solid #CD5C5C;
 }
 
 .btn-ssrn {
@@ -330,8 +330,9 @@ a:hover {
 
 /* Award styles in Research Page */
 .award-text {
-  /* color: #8B0000;  Change to your desired color */
-  font-size: 14px;
+  color: black;   /* Change to your desired color */
+  font-weight: 100;
+  font-size: 16px;
 }
 
 /* Paper styles in Research Page */
