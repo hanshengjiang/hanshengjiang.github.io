@@ -151,7 +151,7 @@ html {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #004B80 !important; /* Hover link blue */
+  color: #336699 !important; /* Hover link blue */
 }
 
 /* Ensure active link also uses the default blue */
@@ -283,8 +283,8 @@ body {
 
 .btn-journal {
   background-color: #CCECFF; 
-  color: #004B80;
-  border: 1px solid #004B80;
+  color: #336699;
+  border: 1px solid #336699;
 }
 
 .btn-proceeding {
@@ -315,14 +315,14 @@ body {
   color: #3F88C5 !important;
 }
 .btn-link:hover {
-  color: #004B80 !important;
+  color: #336699 !important;
 }
 
 a {
   color: #3F88C5; /* Brighter navy-blue */
 }
 a:hover {
-  color: #004B80; /* Slightly darker on hover */
+  color: #336699; /* Slightly darker on hover */
 }
 
 /* End of Button styles */
