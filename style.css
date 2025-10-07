@@ -335,6 +335,13 @@ a:hover {
   font-size: 16px;
 }
 
+/* Outlet styles in Research Page */
+.outlet-text {
+  color: black;   /* Change to your desired color */
+  font-weight: 100;
+  font-size: 16px;
+}
+
 /* Paper styles in Research Page */
 
 b, strong {
@@ -343,10 +350,11 @@ b, strong {
 }
 
 .paper-title-link {
-  color: black; /* Change to your desired color */
+  color: #3F88C5; /* Change to your desired color */
   font-weight: 400; /* Apply your desired weight */
 }
 .paper-title-link:hover {
+  color: #336699; /* Change to your desired hover color */
   font-weight: 400; /* Apply your desired weight */
 }
 
