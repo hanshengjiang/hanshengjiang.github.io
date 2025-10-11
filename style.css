@@ -147,11 +147,11 @@ html {
 
 /* Add these rules for nav link colors */
 .navbar-nav .nav-link {
-  color: #3F88C5 !important; /* Default link blue */
+  color: #005A9C !important; /* Default link blue */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #336699 !important; /* Hover link blue */
+  color: #3F88C5 !important; /* Hover link blue */
 }
 
 /* Ensure active link also uses the default blue */
@@ -191,6 +191,11 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-weight: 400;
+}
+
+.light {
+  font-weight: 100;
+  font-size: 16px;
 }
 
 .lead {
@@ -283,8 +288,8 @@ body {
 
 .btn-journal {
   background-color: #CCECFF; 
-  color: #336699;
-  border: 1px solid #336699;
+  color: #3F88C5;
+  border: 1px solid #3F88C5;
 }
 
 .btn-proceeding {
@@ -312,17 +317,17 @@ body {
 }
 
 .btn-link {
-  color: #3F88C5 !important;
+  color: #005A9C !important;
 }
 .btn-link:hover {
-  color: #336699 !important;
+  color: #3F88C5 !important;
 }
 
 a {
-  color: #3F88C5; /* Brighter navy-blue */
+  color: #005A9C; /* Brighter navy-blue */
 }
 a:hover {
-  color: #336699; /* Slightly darker on hover */
+  color: #3F88C5; /* Slightly darker on hover */
 }
 
 /* End of Button styles */
@@ -350,11 +355,11 @@ b, strong {
 }
 
 .paper-title-link {
-  color: #3F88C5; /* Change to your desired color */
+  color: #005A9C; /* Change to your desired color */
   font-weight: 400; /* Apply your desired weight */
 }
 .paper-title-link:hover {
-  color: #336699; /* Change to your desired hover color */
+  color: #3F88C5; /* Change to your desired hover color */
   font-weight: 400; /* Apply your desired weight */
 }
 
