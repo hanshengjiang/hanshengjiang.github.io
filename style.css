@@ -177,7 +177,7 @@ ul{
 
 .boldlink {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -195,29 +195,29 @@ p {
 
 .light {
   font-weight: 100;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .light-2 {
   font-weight: 200;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .light-3 {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .lead {
   /*  font-family: Arial, Helvetica, sans-serif; */
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .abstract-text{
   /* font-family: Arial, Helvetica, sans-serif; */
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .hidden {
@@ -347,14 +347,14 @@ a:hover {
 .award-text {
   color: black;   /* Change to your desired color */
   font-weight: 200;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* Outlet styles in Research Page */
 .outlet-text {
   color: black;   /* Change to your desired color */
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* Paper styles in Research Page */
