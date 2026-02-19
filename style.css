@@ -367,10 +367,12 @@ b, strong {
 .paper-title-link {
   color: #005A9C; /* Change to your desired color */
   font-weight: 500; /* Apply your desired weight */
+  font-size: 18px;
 }
 .paper-title-link:hover {
   color: #3F88C5; /* Change to your desired hover color */
   font-weight: 500; /* Apply your desired weight */
+  font-size: 18px;
 }
 
 /* End of Paper styles */
