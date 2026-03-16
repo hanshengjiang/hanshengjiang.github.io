@@ -30,6 +30,11 @@
       p.lead a:not([class]) {
         color: inherit;
       }
+      p.lead a.btn {
+        font-size: 0.82rem;
+        line-height: 1.2;
+        padding: 0.1rem 0.38rem !important;
+      }
     </style>
     <!-- End of added style block -->
 
@@ -64,7 +69,7 @@
        <a href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4189049" target="_blank" class="paper-title-link">
       Multi-Product Dynamic Pricing with  Reference Effects Under Logit Demand</a>
        <br>
-     with <a href="https://mengziamyguo.github.io/amyguo//" target = "_blank">Mengzi Amy Guo</a>, <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>
+     <a href="https://mengziamyguo.github.io/amyguo//" target = "_blank">Mengzi Amy Guo</a>, Hansheng Jiang, <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>
      <br>
      <i class="outlet-text">Manufacturing & Service Operations Management, 2025</i>
      <br>
@@ -91,7 +96,7 @@
       <a href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3702824" target="_blank" class="paper-title-link">
      Intertemporal Pricing via Nonparametric Estimation: Integrating Reference Effects and Consumer Heterogeneity</a>
      <br>
-     with <a href="https://junyucao.com/" target = "_blank">Junyu Cao</a>, <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>
+     Hansheng Jiang, <a href="https://junyucao.com/" target = "_blank">Junyu Cao</a>, <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>
      <br>
      <i class="outlet-text">Manufacturing & Service Operations Management, 2024</i>
      <br>
@@ -126,159 +131,16 @@
   </ul>
 
   <hr>
-    <h3>Conference Proceedings</h3>
-  <ul>
-    <li>
-      <p class="lead">
-         <a  href = "" target="_blank" class="paper-title-link"> Learning in Continuous State-Space MDPs for Network Inventory Management
-          </a>
-          <br>
-          with Shunan Jiang, <a href = "https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>
-          <br>
-         <i class="outlet-text">International Conference on Artificial Intelligence and Statistics (AISTATS), 2026</i> 
-         <br>
-          <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#network_inventory" > Abstract
-          </a>
-          <a class="btn btn-code btn-sm py-0" role= "button" href = "https://github.com/hanshengjiang/Lipschitz-NetworkInventory" target="_blank"> Code  
-          </a>  
-          <a class="btn btn-proceeding btn-sm py-0" role= "button" href = "https://openreview.net/forum?id=e4ATBG2Oh5" target="_blank"> Proceeding
-          </a>
-          
-
-
-          <div class = "collapse" id="network_inventory">
-            <div class="card bg-light card-body">
-              <span class = "abstract-text">  We consider online learning in infinite-horizon, average-cost Markov Decision Processes (MDPs) with multi-dimensional, continuous state spaces and censored feedback. Our model setting, motivated by network inventory management applications such as vehicle sharing, is characterized by complex, correlated state transitions and the absence of value function convexity, rendering standard analytical techniques for both MDPs and inventory control inapplicable. Our primary contribution is a integrated framework establishing and leveraging the Lipschitz property of the long-run average cost function. This insight allows us to analyze the problem through the lens of Lipschitz bandits, for which we design a provably efficient online learning algorithm that learns a near-optimal policy from censored demand data. We derive a high-probability regret bound of $O(T^{\frac{n}{n+1}} (\log T)^{\frac{1}{n+1}})$, where $n$ is the network size through new concentration inequalities for cumulative costs in MDPs with state-dependent transitions. Furthermore, we devise a matching lower bound for this learning problem, which captures the inherent dimensionality challenge.
-              </span> 
-            </div>
-          </div>
-    </li>
-<li>
-      <p class="lead">
-         <a  href = "https://arxiv.org/abs/2410.14899" target="_blank" class="paper-title-link">
-      Out-of-distribution Robust Optimization
-    </a>
-    <br>
-      with Zhongze Cai, <a href="https://xiaocheng-li.github.io/" target = "_blank">Xiaocheng Li</a>
-      <br>
-     <i class="outlet-text">Conference on Uncertainty in Artificial Intelligence (UAI), 2025</i>
-      <br>
-      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#ood_ro" > Abstract
-     </a>
-     <a class="btn btn-arxiv btn-sm py-0" role= "button" href = "https://arxiv.org/abs/2410.14899" target="_blank"> arXiv
-     </a>
-     <a class="btn btn-proceeding btn-sm py-0" role= "button" href = "https://dl.acm.org/doi/abs/10.5555/3762387.3762412" target="_blank"> Proceeding
-    </a>
-      <br>
-     <div class="collapse" id="ood_ro">
-      <div class="card bg-light card-body">
-        <span class = "abstract-text">
-       In this paper, we consider the contextual robust optimization problem under an out-of-distribution setting. The contextual robust optimization problem considers a risk-sensitive objective function for an optimization problem with the presence of a context vector (also known as covariates or side information) capturing related information. While the existing works mainly consider the in-distribution setting, and the resultant robustness achieved is in an out-of-sample sense, our paper studies an out-of-distribution setting where there can be a difference between the test environment and the training environment where the data are collected. We propose methods that handle this out-of-distribution setting, and the key relies on a density ratio estimation for the distribution shift. We show that additional structures such as covariate shift and label shift are not only helpful in defending distribution shift but also necessary in avoiding non-trivial solutions compared to other principled methods such as distributionally robust optimization. We also illustrate how the covariates can be useful in this procedure. Numerical experiments generate more intuitions and demonstrate that the proposed methods can help avoid over-conservative solutions.
-     </spsan>
-      </div>
-    </div>
-    </li>
-
- <li>
-      <p class="lead">
-         <a  href = "https://arxiv.org/pdf/2310.07558.pdf" target="_blank" class="paper-title-link">
-      Smoothness-Adaptive Dynamic Pricing with Nonparametric Demand Learning
-    </a>
-    <br>
-      with <a href="https://scholar.google.com/citations?user=YB04AKkAAAAJ&hl=en" target="_blank">Zeqi Ye</a>
-    <br>
-   <i class="outlet-text">International Conference on Artificial Intelligence and Statistics (AISTATS), 2024</i>
-      <br>
-      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#sadp" > Abstract
-     </a>
-     <a class="btn btn-arxiv btn-sm py-0" role= "button" href = "https://arxiv.org/abs/2310.07558" target="_blank"> arXiv
-     </a>
-     <a class="btn btn-slides btn-sm py-0" role= "button" href ="files/slides/Smoothness_Adaptive_Dynamic_Pricing_Slides.pdf" target="_blank"> Slides
-    </a>
-     <a class="btn btn-code btn-sm py-0" role= "button" href ="https://github.com/liamyzq/Smoothness-Adaptive-Dynamic-Pricing" target="_blank"> Code
-     </a>
-     <a class="btn btn-proceeding btn-sm py-0" role= "button" href = "https://proceedings.mlr.press/v238/ye24b" target="_blank"> Proceeding
-    </a>
-      <br>
-     <div class="collapse" id="sadp">
-      <div class="card bg-light card-body">
-        <span class = "abstract-text">
-       We study the dynamic pricing problem where the demand function is nonparametric and H\"older smooth, and we focus on adaptivity to the unknown H\"older smoothness parameter $\beta$ of the demand function. Traditionally the optimal dynamic pricing algorithm heavily relies on the knowledge of $\beta$ to achieve a minimax optimal regret of $\widetilde{O}(T^{\frac{\beta+1}{2\beta+1}})$. However, we highlight the challenge of adaptivity in this dynamic pricing problem by proving that no pricing policy can adaptively achieve this minimax optimal regret without knowledge of $\beta$. Motivated by the impossibility result, we propose a self-similarity condition to enable adaptivity. Importantly, we show that the self-similarity condition does not compromise the problem's inherent complexity since it preserves the regret lower bound $\Omega(T^{\frac{\beta+1}{2\beta+1}})$. Furthermore, we develop a smoothness-adaptive dynamic pricing algorithm and theoretically prove that the algorithm achieves this minimax optimal regret bound without the prior knowledge $\beta$.
-     </span>
-      </div>
-    </div>
-    
-      <p class="lead">
-         <a  href = "https://arxiv.org/abs/2209.08246" target="_blank" class="paper-title-link">
-      Quantum Computing Methods for Supply Chain Management
-    </a>
-    <br>
-      with <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>, <a href="https://sites.google.com/view/junyuliu/main" target = "_blank">Junyu Liu</a>
-    <br>
-   <i class="outlet-text">IEEE/ACM Symposium on Edge Computing (SEC), 2022</i>
-      <br>
-      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#quantum_supply_chain" > Abstract
-     </a>
-     <a class="btn btn-arxiv btn-sm py-0" role= "button" href = "https://arxiv.org/abs/2209.08246" target="_blank"> arXiv
-     </a>
-     <a class="btn btn-proceeding btn-sm py-0" role= "button" href = "https://ieeexplore.ieee.org/document/9996622" target="_blank"> Proceeding
-     </a>
-      <br>
-     <div class="collapse" id="quantum_supply_chain">
-      <div class="card bg-light card-body">
-        <span class = "abstract-text">
-       Quantum computing is expected to have transformative influences on many domains, but its practical deployments on industry problems are underexplored. We focus on applying quantum computing to operations management problems in industry, and in particular, supply chain management. Many problems in supply chain management involve large state and action spaces and pose computational challenges on classic computers. We develop a quantized policy iteration algorithm to solve an inventory control problem and demonstrative its effectiveness. We also discuss in-depth the hardware requirements and potential challenges on implementing this quantum algorithm in the near term. Our simulations and experiments are powered by the IBM Qiskit and the qBraid system.
-     </span>
-      </div>
-    </div>
-    </li>
-
-</ul>
-
-    
-    <!-- <p class = "lead">
-      * indicates equal contribution.
-    </p> -->
-</ul> 
-
-<hr>
 
 <h3>Working Papers</h3>
  <ul>
 
-  <li >
-    <p class="lead">
-       <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5002233" target="_blank" class="paper-title-link">
-      Designing Surprise Bags for Surplus Foods</a>
-      <br>
-      with <a href="https://www.zhou.fan/" target= "_blank">Fan Zhou</a>, <a href="https://www.linkedin.com/posts/hansheng-jiang-497535108_sustainability-foodwaste-operationsmanagement-activity-7288722562342174720--8qr?utm_source=share&utm_medium=member_desktop&rcm=ACoAABshk3MBYplpYDMrt-Jwg34LMXhKL0mo1_E" target = "_blank"> Andrea Li</a>, <a href="https://sites.google.com/a/umich.edu/juichanco/home" target = "_blank"> Joline Uichanco</a>
-      <br>
-      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#bag_food" >  Abstract
-     </a>
-      <a class="btn btn-ssrn btn-sm py-0" role= "button" href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5002233" target="_blank"> SSRN
-     </a>
-     <a class="btn btn-slides btn-sm py-0" role= "button" href = "files/slides/TGTG-Slides.pdf" target="_blank"> Slides
-     </a>
-      <br>
-      <div class="collapse" id="bag_food">
-      <div class="card bg-light card-body">
-        <span class = "abstract-text">
-          Too Good To Go (TGTG) has emerged as a global leader in reducing food waste by connecting consumers with retailers' surplus food through ``surprise bags.'' While TGTG provides both environmental and economic benefits, participating stores face significant operational challenges in determining the optimal number of bags to offer. Specifically, stores must decide on the number of surprise bags before knowing the actual surplus for the day. Additionally, key questions such as whether to include regular sale items in the bags and how to allocate food across bags are critical for balancing customer satisfaction and profitability. We explore these challenges and model the stores' decision-making process by stochastic dynamic programming. Our analysis reveals that the commonly adopted practice of evenly distributing surplus food across all surprise bags may not maximize consumer satisfaction, particularly when customer utility functions are non-concave.  We propose an alternative---offering up to two types of bags---that achieves maximal consumer satisfaction while still remaining simple to implement. Determining the optimal number of bags and the total food volume to allocate at each period is a non-convex two-stage stochastic optimization problem. To address both the analytical and computational complexities, we propose two approximation policies that are computationally efficient with intuitive managerial insights and provable performance guarantees. Our findings provide practical guidance for stores in balancing revenue generation, customer satisfaction, and sustainability objectives, thereby enhancing the long-term viability of TGTG's mission to reduce food waste.
-     </span>
-      </div>
-    </div>
-    </p>
-  </li>
-  
-
-  
- 
-  <li >
+<li>
     <p class="lead">
        <a href = "https://arxiv.org/pdf/2108.09816.pdf" target="_blank" class="paper-title-link">
       A Nonparametric Maximum Likelihood Approach to Mixture of Regression</a>
        <br>
-      with <a href="https://www.stat.berkeley.edu/~aditya/" target = "_blank">Adityanand Guntuboyina</a>
+      Hansheng Jiang, <a href="https://www.stat.berkeley.edu/~aditya/" target = "_blank">Adityanand Guntuboyina</a>
       <br>
       <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#npmle_mr">  Abstract
      </a>
@@ -303,40 +165,10 @@
 
   <li >
     <p class="lead">
-       <a href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5338354" target="_blank" class="paper-title-link">
-      Conformal Robust Optimization and Satisficing for Prescriptive Analytics with Black-Box Predictors</a>
-      <br>
-      with Lingjie Zhao, <a href="https://wei-qi-home.github.io/" target = "_blank">Wei Qi</a>
-      <br>
-      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#cro_crs" >  Abstract
-     </a>
-     <a class="btn btn-ssrn btn-sm py-0" role= "button" href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5338354" target="_blank"> SSRN
-     </a>
-     <br>
-      <span class="lead award-text">
-            &#9734; INFORMS Undergraduate Operations Research Prize, Finalist (Lingjie Zhao)
-      </span>
-      <br>
-      <span class="lead award-text">
-             &#9734; Accepted to AISTATS 2026 Workshop on <a href="https://calibration-workshop.github.io/" target="_blank">Calibration for Modern AI</a>
-      </span>
-     <br>
-      <div class="collapse" id="cro_crs">
-      <div class="card bg-light card-body">
-        <span class = "abstract-text">
-       We propose a unified conformal framework for robust decision-making in prescriptive analytics with black-box predictors. The framework addresses the challenge of leveraging predictive power of black-box predictors without sacrificing reliability in high-stakes optimization, whereas naively optimizing over point forecasts often yields fragile or infeasible decisions. It supports two complementary paradigms: Conformal Robust Optimization (CRO), which integrates any black-box predictor into a robust optimization model by constructing a data-driven uncertainty set calibrated to a user-specified coverage level, and Conformal Robust Satisficing (CRS), a target-oriented counterpart that minimizes fragility relative to a desired utility threshold. We prove that CRO and CRS are theoretically equivalent under mild convexity and duality conditions, establishing an explicit correspondence between the uncertainty set size and the satisficing target. We provide finite-sample analysis to show that the realized coverage concentrates the target coverage level at an O(n^{-1/2}) rate and that the CRO solution’s sub‐optimality gap is bounded by the diameter of the calibrated set. Extensive experiments on synthetic problems and a real-world perishable inventory management case study demonstrate the framework's effectiveness. Notably, CRO can significantly outperform baselines in objective value while guaranteeing out-of-sample coverage, whereas CRS demonstrates superior feasibility and optimality compared to distributionally robust satisficing benchmarks. 
-      </span>  
-      </div>
-    </div>
-    </p>
-  </li> 
-
-  <li >
-    <p class="lead">
        <a href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4140449" target="_blank" class="paper-title-link">
       Spatial Supply Repositioning with Censored Demand Data</a>
       <br>
-      with <a href="https://scholar.google.com/citations?view_op=list_works&user=2MMNRmoAAAAJ" target = "_blank">Chunlin Sun</a>, <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>
+      Hansheng Jiang, <a href="https://scholar.google.com/citations?view_op=list_works&user=2MMNRmoAAAAJ" target = "_blank">Chunlin Sun</a>, <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>
       <br>
       <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#vehicle_rp" >  Abstract
      </a>
@@ -367,6 +199,60 @@
     </div>
     </p>
   </li>
+
+  <li >
+    <p class="lead">
+       <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5002233" target="_blank" class="paper-title-link">
+      Designing Surprise Bags for Surplus Foods</a>
+      <br>
+      <a href="https://www.zhou.fan/" target= "_blank">Fan Zhou</a>, Hansheng Jiang, <a href="https://www.linkedin.com/posts/hansheng-jiang-497535108_sustainability-foodwaste-operationsmanagement-activity-7288722562342174720--8qr?utm_source=share&utm_medium=member_desktop&rcm=ACoAABshk3MBYplpYDMrt-Jwg34LMXhKL0mo1_E" target = "_blank"> Andrea Li</a>, <a href="https://sites.google.com/a/umich.edu/juichanco/home" target = "_blank"> Joline Uichanco</a>
+      <br>
+      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#bag_food" >  Abstract
+     </a>
+      <a class="btn btn-ssrn btn-sm py-0" role= "button" href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5002233" target="_blank"> SSRN
+     </a>
+     <a class="btn btn-slides btn-sm py-0" role= "button" href = "files/slides/TGTG-Slides.pdf" target="_blank"> Slides
+     </a>
+      <br>
+      <div class="collapse" id="bag_food">
+      <div class="card bg-light card-body">
+        <span class = "abstract-text">
+          Too Good To Go (TGTG) has emerged as a global leader in reducing food waste by connecting consumers with retailers' surplus food through ``surprise bags.'' While TGTG provides both environmental and economic benefits, participating stores face significant operational challenges in determining the optimal number of bags to offer. Specifically, stores must decide on the number of surprise bags before knowing the actual surplus for the day. Additionally, key questions such as whether to include regular sale items in the bags and how to allocate food across bags are critical for balancing customer satisfaction and profitability. We explore these challenges and model the stores' decision-making process by stochastic dynamic programming. Our analysis reveals that the commonly adopted practice of evenly distributing surplus food across all surprise bags may not maximize consumer satisfaction, particularly when customer utility functions are non-concave.  We propose an alternative---offering up to two types of bags---that achieves maximal consumer satisfaction while still remaining simple to implement. Determining the optimal number of bags and the total food volume to allocate at each period is a non-convex two-stage stochastic optimization problem. To address both the analytical and computational complexities, we propose two approximation policies that are computationally efficient with intuitive managerial insights and provable performance guarantees. Our findings provide practical guidance for stores in balancing revenue generation, customer satisfaction, and sustainability objectives, thereby enhancing the long-term viability of TGTG's mission to reduce food waste.
+     </span>
+      </div>
+    </div>
+    </p>
+  </li>
+
+  <li >
+    <p class="lead">
+       <a href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5338354" target="_blank" class="paper-title-link">
+      Conformal Robust Optimization and Satisficing for Prescriptive Analytics with Black-Box Predictors</a>
+      <br>
+      Lingjie Zhao, Hansheng Jiang, <a href="https://wei-qi-home.github.io/" target = "_blank">Wei Qi</a>
+      <br>
+      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#cro_crs" >  Abstract
+     </a>
+     <a class="btn btn-ssrn btn-sm py-0" role= "button" href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5338354" target="_blank"> SSRN
+     </a>
+     <br>
+      <span class="lead award-text">
+            &#9734; INFORMS Undergraduate Operations Research Prize, Finalist (Lingjie Zhao)
+      </span>
+      <br>
+      <span class="lead award-text">
+             &#9734; Accepted to AISTATS 2026 Workshop on <a href="https://calibration-workshop.github.io/" target="_blank">Calibration for Modern AI</a>
+      </span>
+     <br>
+      <div class="collapse" id="cro_crs">
+      <div class="card bg-light card-body">
+        <span class = "abstract-text">
+       We propose a unified conformal framework for robust decision-making in prescriptive analytics with black-box predictors. The framework addresses the challenge of leveraging predictive power of black-box predictors without sacrificing reliability in high-stakes optimization, whereas naively optimizing over point forecasts often yields fragile or infeasible decisions. It supports two complementary paradigms: Conformal Robust Optimization (CRO), which integrates any black-box predictor into a robust optimization model by constructing a data-driven uncertainty set calibrated to a user-specified coverage level, and Conformal Robust Satisficing (CRS), a target-oriented counterpart that minimizes fragility relative to a desired utility threshold. We prove that CRO and CRS are theoretically equivalent under mild convexity and duality conditions, establishing an explicit correspondence between the uncertainty set size and the satisficing target. We provide finite-sample analysis to show that the realized coverage concentrates the target coverage level at an O(n^{-1/2}) rate and that the CRO solution’s sub‐optimality gap is bounded by the diameter of the calibrated set. Extensive experiments on synthetic problems and a real-world perishable inventory management case study demonstrate the framework's effectiveness. Notably, CRO can significantly outperform baselines in objective value while guaranteeing out-of-sample coverage, whereas CRS demonstrates superior feasibility and optimality compared to distributionally robust satisficing benchmarks. 
+      </span>  
+      </div>
+    </div>
+    </p>
+  </li> 
 
   <!--
   <li>
@@ -423,7 +309,7 @@
        <a href = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021292" target="_blank" class="paper-title-link">
       Supply Chain Forecast Sharing Under Asymmetric Forecast Preferences</a>
       <br>
-      with Lin Zhao, <a href="https://lvmengshi.wordpress.com/" target = "_blank">Mengshi Lu</a>, <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>,  Kemal Guler
+      Lin Zhao, Hansheng Jiang, <a href="https://lvmengshi.wordpress.com/" target = "_blank">Mengshi Lu</a>, <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>,  Kemal Guler
        <br>
       <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#forecast_share" >  Abstract
      </a>
@@ -439,6 +325,123 @@
     </div>
     </p>
 </li>
+
+  <hr>
+
+    <h3>Conference Proceedings</h3>
+  <ul>
+    <li>
+      <p class="lead">
+         <a  href = "" target="_blank" class="paper-title-link"> Learning in Continuous State-Space MDPs for Network Inventory Management
+          </a>
+          <br>
+          Hansheng Jiang, Shunan Jiang, <a href = "https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>
+          <br>
+         <i class="outlet-text">International Conference on Artificial Intelligence and Statistics (AISTATS), 2026</i> 
+         <br>
+          <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#network_inventory" > Abstract
+          </a>
+          <a class="btn btn-code btn-sm py-0" role= "button" href = "https://github.com/hanshengjiang/Lipschitz-NetworkInventory" target="_blank"> Code  
+          </a>  
+          <a class="btn btn-proceeding btn-sm py-0" role= "button" href = "https://openreview.net/forum?id=e4ATBG2Oh5" target="_blank"> Proceeding
+          </a>
+          
+
+
+          <div class = "collapse" id="network_inventory">
+            <div class="card bg-light card-body">
+              <span class = "abstract-text">  We consider online learning in infinite-horizon, average-cost Markov Decision Processes (MDPs) with multi-dimensional, continuous state spaces and censored feedback. Our model setting, motivated by network inventory management applications such as vehicle sharing, is characterized by complex, correlated state transitions and the absence of value function convexity, rendering standard analytical techniques for both MDPs and inventory control inapplicable. Our primary contribution is a integrated framework establishing and leveraging the Lipschitz property of the long-run average cost function. This insight allows us to analyze the problem through the lens of Lipschitz bandits, for which we design a provably efficient online learning algorithm that learns a near-optimal policy from censored demand data. We derive a high-probability regret bound of $O(T^{\frac{n}{n+1}} (\log T)^{\frac{1}{n+1}})$, where $n$ is the network size through new concentration inequalities for cumulative costs in MDPs with state-dependent transitions. Furthermore, we devise a matching lower bound for this learning problem, which captures the inherent dimensionality challenge.
+              </span> 
+            </div>
+          </div>
+    </li>
+<li>
+      <p class="lead">
+         <a  href = "https://arxiv.org/abs/2410.14899" target="_blank" class="paper-title-link">
+      Out-of-distribution Robust Optimization
+    </a>
+    <br>
+      Zhongze Cai, Hansheng Jiang, <a href="https://xiaocheng-li.github.io/" target = "_blank">Xiaocheng Li</a>
+      <br>
+     <i class="outlet-text">Conference on Uncertainty in Artificial Intelligence (UAI), 2025</i>
+      <br>
+      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#ood_ro" > Abstract
+     </a>
+     <a class="btn btn-arxiv btn-sm py-0" role= "button" href = "https://arxiv.org/abs/2410.14899" target="_blank"> arXiv
+     </a>
+     <a class="btn btn-proceeding btn-sm py-0" role= "button" href = "https://dl.acm.org/doi/abs/10.5555/3762387.3762412" target="_blank"> Proceeding
+    </a>
+      <br>
+     <div class="collapse" id="ood_ro">
+      <div class="card bg-light card-body">
+        <span class = "abstract-text">
+       In this paper, we consider the contextual robust optimization problem under an out-of-distribution setting. The contextual robust optimization problem considers a risk-sensitive objective function for an optimization problem with the presence of a context vector (also known as covariates or side information) capturing related information. While the existing works mainly consider the in-distribution setting, and the resultant robustness achieved is in an out-of-sample sense, our paper studies an out-of-distribution setting where there can be a difference between the test environment and the training environment where the data are collected. We propose methods that handle this out-of-distribution setting, and the key relies on a density ratio estimation for the distribution shift. We show that additional structures such as covariate shift and label shift are not only helpful in defending distribution shift but also necessary in avoiding non-trivial solutions compared to other principled methods such as distributionally robust optimization. We also illustrate how the covariates can be useful in this procedure. Numerical experiments generate more intuitions and demonstrate that the proposed methods can help avoid over-conservative solutions.
+     </spsan>
+      </div>
+    </div>
+    </li>
+
+ <li>
+      <p class="lead">
+         <a  href = "https://arxiv.org/pdf/2310.07558.pdf" target="_blank" class="paper-title-link">
+      Smoothness-Adaptive Dynamic Pricing with Nonparametric Demand Learning
+    </a>
+    <br>
+      <a href="https://scholar.google.com/citations?user=YB04AKkAAAAJ&hl=en" target="_blank">Zeqi Ye</a>, Hansheng Jiang
+    <br>
+   <i class="outlet-text">International Conference on Artificial Intelligence and Statistics (AISTATS), 2024</i>
+      <br>
+      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#sadp" > Abstract
+     </a>
+     <a class="btn btn-arxiv btn-sm py-0" role= "button" href = "https://arxiv.org/abs/2310.07558" target="_blank"> arXiv
+     </a>
+     <a class="btn btn-slides btn-sm py-0" role= "button" href ="files/slides/Smoothness_Adaptive_Dynamic_Pricing_Slides.pdf" target="_blank"> Slides
+    </a>
+     <a class="btn btn-code btn-sm py-0" role= "button" href ="https://github.com/liamyzq/Smoothness-Adaptive-Dynamic-Pricing" target="_blank"> Code
+     </a>
+     <a class="btn btn-proceeding btn-sm py-0" role= "button" href = "https://proceedings.mlr.press/v238/ye24b" target="_blank"> Proceeding
+    </a>
+      <br>
+     <div class="collapse" id="sadp">
+      <div class="card bg-light card-body">
+        <span class = "abstract-text">
+       We study the dynamic pricing problem where the demand function is nonparametric and H\"older smooth, and we focus on adaptivity to the unknown H\"older smoothness parameter $\beta$ of the demand function. Traditionally the optimal dynamic pricing algorithm heavily relies on the knowledge of $\beta$ to achieve a minimax optimal regret of $\widetilde{O}(T^{\frac{\beta+1}{2\beta+1}})$. However, we highlight the challenge of adaptivity in this dynamic pricing problem by proving that no pricing policy can adaptively achieve this minimax optimal regret without knowledge of $\beta$. Motivated by the impossibility result, we propose a self-similarity condition to enable adaptivity. Importantly, we show that the self-similarity condition does not compromise the problem's inherent complexity since it preserves the regret lower bound $\Omega(T^{\frac{\beta+1}{2\beta+1}})$. Furthermore, we develop a smoothness-adaptive dynamic pricing algorithm and theoretically prove that the algorithm achieves this minimax optimal regret bound without the prior knowledge $\beta$.
+     </span>
+      </div>
+    </div>
+    
+      <p class="lead">
+         <a  href = "https://arxiv.org/abs/2209.08246" target="_blank" class="paper-title-link">
+      Quantum Computing Methods for Supply Chain Management
+    </a>
+    <br>
+      Hansheng Jiang, <a href="https://www.hkubs.hku.hk/people/max-z-j-shen/" target = "_blank">ZJ Max Shen</a>, <a href="https://sites.google.com/view/junyuliu/main" target = "_blank">Junyu Liu</a>
+    <br>
+   <i class="outlet-text">IEEE/ACM Symposium on Edge Computing (SEC), 2022</i>
+      <br>
+      <a class="btn btn-abstract btn-sm py-0" role= "button" data-toggle="collapse" href="#quantum_supply_chain" > Abstract
+     </a>
+     <a class="btn btn-arxiv btn-sm py-0" role= "button" href = "https://arxiv.org/abs/2209.08246" target="_blank"> arXiv
+     </a>
+     <a class="btn btn-proceeding btn-sm py-0" role= "button" href = "https://ieeexplore.ieee.org/document/9996622" target="_blank"> Proceeding
+     </a>
+      <br>
+     <div class="collapse" id="quantum_supply_chain">
+      <div class="card bg-light card-body">
+        <span class = "abstract-text">
+       Quantum computing is expected to have transformative influences on many domains, but its practical deployments on industry problems are underexplored. We focus on applying quantum computing to operations management problems in industry, and in particular, supply chain management. Many problems in supply chain management involve large state and action spaces and pose computational challenges on classic computers. We develop a quantized policy iteration algorithm to solve an inventory control problem and demonstrative its effectiveness. We also discuss in-depth the hardware requirements and potential challenges on implementing this quantum algorithm in the near term. Our simulations and experiments are powered by the IBM Qiskit and the qBraid system.
+     </span>
+      </div>
+    </div>
+    </li>
+
+</ul>
+
+    
+    <!-- <p class = "lead">
+      * indicates equal contribution.
+    </p> -->
+</ul> 
 
   <hr>
 
@@ -490,6 +493,7 @@
     <h4>Award Competition Judge</h4>
     <ul>
       <li>Committee Member, INFORMS <a href="https://www.informs.org/About-INFORMS/Governance/Committees/Awards-Group/Franz-Edelman-Award-Committee" target="_blank">Franz Edelman Award</a> Committee 2025, 2026</li>
+      <li>Reviewer, MSOM Service Management SIG 2026</li>
       <li>Reviewer, MSOM Sustainable Operations SIG 2026</li>
       <li>Reviewer, MSOM Supply Chain Management SIG 2023, 2024, 2025</li>
       <li>Reviewer, MSOM Technology, Innovation, and Entrepreneurship SIG 2024</li>
