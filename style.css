@@ -343,6 +343,137 @@ a:hover {
 /* End of Button styles */
 
 
+/* Research page styles */
+body.research-page {
+  color: #666;
+}
+
+.research-page p.lead a:not([class]) {
+  color: inherit;
+}
+
+.research-page p.lead a.btn {
+  font-size: 0.82rem;
+  line-height: 1.2;
+  padding: 0.1rem 0.38rem !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.research-page p.lead a.btn:hover,
+.research-page p.lead a.btn:focus {
+  text-decoration: none;
+}
+
+.research-page p.lead a.btn-code {
+  background-color: rgba(234, 250, 241, 0.6);
+  border-color: rgba(29, 131, 72, 0.55);
+}
+
+.research-page p.lead a.btn-abstract {
+  background-color: rgba(234, 240, 248, 0.6);
+  border-color: rgba(44, 75, 96, 0.55);
+}
+
+.research-page p.lead a.btn-pdf {
+  background-color: rgba(253, 237, 236, 0.6);
+  border-color: rgba(192, 57, 43, 0.55);
+}
+
+.research-page p.lead a.btn-slides {
+  background-color: rgba(255, 242, 224, 0.6);
+  border-color: rgba(191, 105, 0, 0.55);
+}
+
+.research-page p.lead a.btn-data {
+  background-color: rgba(245, 238, 252, 0.6);
+  border-color: rgba(108, 52, 131, 0.55);
+}
+
+.research-page p.lead a.btn-journal {
+  background-color: rgba(204, 236, 255, 0.6);
+  border-color: rgba(63, 136, 197, 0.55);
+}
+
+.research-page p.lead a.btn-proceeding {
+  background-color: rgba(255, 248, 225, 0.6);
+  border-color: rgba(107, 79, 0, 0.55);
+}
+
+.research-page p.lead a.btn-arxiv {
+  background-color: rgba(254, 247, 247, 0.6);
+  border-color: rgba(205, 92, 92, 0.55);
+}
+
+.research-page p.lead a.btn-ssrn {
+  background-color: rgba(210, 227, 250, 0.6);
+  border-color: rgba(29, 46, 80, 0.55);
+}
+
+.research-page p.lead a.btn-misc {
+  background-color: rgba(250, 224, 149, 0.6);
+  border-color: rgba(74, 55, 0, 0.55);
+}
+
+.research-page p.lead a.btn-code:hover,
+.research-page p.lead a.btn-code:focus {
+  background-color: rgba(234, 250, 241, 0.78);
+  border-color: rgba(29, 131, 72, 0.72);
+}
+
+.research-page p.lead a.btn-abstract:hover,
+.research-page p.lead a.btn-abstract:focus {
+  background-color: rgba(234, 240, 248, 0.78);
+  border-color: rgba(44, 75, 96, 0.72);
+}
+
+.research-page p.lead a.btn-pdf:hover,
+.research-page p.lead a.btn-pdf:focus {
+  background-color: rgba(253, 237, 236, 0.78);
+  border-color: rgba(192, 57, 43, 0.72);
+}
+
+.research-page p.lead a.btn-slides:hover,
+.research-page p.lead a.btn-slides:focus {
+  background-color: rgba(255, 242, 224, 0.78);
+  border-color: rgba(191, 105, 0, 0.72);
+}
+
+.research-page p.lead a.btn-data:hover,
+.research-page p.lead a.btn-data:focus {
+  background-color: rgba(245, 238, 252, 0.78);
+  border-color: rgba(108, 52, 131, 0.72);
+}
+
+.research-page p.lead a.btn-journal:hover,
+.research-page p.lead a.btn-journal:focus {
+  background-color: rgba(204, 236, 255, 0.78);
+  border-color: rgba(63, 136, 197, 0.72);
+}
+
+.research-page p.lead a.btn-proceeding:hover,
+.research-page p.lead a.btn-proceeding:focus {
+  background-color: rgba(255, 248, 225, 0.78);
+  border-color: rgba(107, 79, 0, 0.72);
+}
+
+.research-page p.lead a.btn-arxiv:hover,
+.research-page p.lead a.btn-arxiv:focus {
+  background-color: rgba(254, 247, 247, 0.78);
+  border-color: rgba(205, 92, 92, 0.72);
+}
+
+.research-page p.lead a.btn-ssrn:hover,
+.research-page p.lead a.btn-ssrn:focus {
+  background-color: rgba(210, 227, 250, 0.78);
+  border-color: rgba(29, 46, 80, 0.72);
+}
+
+.research-page p.lead a.btn-misc:hover,
+.research-page p.lead a.btn-misc:focus {
+  background-color: rgba(250, 224, 149, 0.78);
+  border-color: rgba(74, 55, 0, 0.72);
+}
+
 /* Award styles in Research Page */
 .award-text {
   color: black;   /* Change to your desired color */
@@ -353,7 +484,7 @@ a:hover {
 /* Outlet styles in Research Page */
 .outlet-text {
   color: black;   /* Change to your desired color */
-  font-weight: 300;
+  font-weight: 365;
   font-size: 18px;
 }
 
@@ -380,8 +511,3 @@ b, strong {
 
 
 /* style.css */
-
-
-
-
-
