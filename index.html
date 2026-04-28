@@ -29,34 +29,6 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="icons/h_pink_favicon.ico">
 
-<script>
-    window.addEventListener('DOMContentLoaded', function () {
-        var updates = document.getElementsByClassName('older-update');
-
-        for (var i = 0; i < updates.length; i++) {
-            var update = updates[i];
-            update.classList.add('hidden');
-        }
-    });
-
-    function toggleUpdates() {
-        var updates = document.getElementsByClassName('older-update');
-        var button = document.getElementById('toggleLink');
-
-        for (var i = 0; i < updates.length; i++) {
-            var update = updates[i];
-            if (update.classList.contains('hidden')) {
-                update.classList.remove('hidden');
-                button.textContent = 'READ LESS -';
-            } else {
-                update.classList.add('hidden');
-                button.textContent = 'READ MORE +';
-            }
-        }
-    }
-</script>
-
-
     <title>Hansheng Jiang</title>
 
   </head>
@@ -165,12 +137,15 @@
         Before joining the University of Toronto, I earned my Ph.D. in Industrial Engineering and Operations Research from the University of California, Berkeley, advised by <a href="https://zj-maxshen.github.io/" target= "_blank"> Max Shen</a> and <a href="https://www.stat.berkeley.edu/~aditya/index.html" target = "_blank">Aditya Guntuboyina</a>. 
         <!-- During my doctoral studies, I gained industry experience as a Research Scientist at Amazon's Supply Chain Optimization Technologies team and Alibaba Cloud.--> Prior to Berkeley, I received my B.S. in Mathematics from USTC. 
     </p>
-<hr>
+<!-- <hr> -->
+  <section class="news-section">
 
   <h3>
    News
   </h3>
-    <ul>
+    <div class="news-window-shell">
+    <div class="news-window" tabindex="0" aria-label="Scrollable news updates">
+    <ul class="news-list">
         
         <!--
         <li>
@@ -339,11 +314,14 @@
         </li>
       
     </ul>
+    </div>
+    <div class="news-scroll-indicator" aria-hidden="true">
+      <span class="news-scroll-thumb"></span>
+    </div>
+    </div>
 
-
-    <button id="toggleLink" class="btn btn-link mt-3" onclick="toggleUpdates()"> READ MORE + </button>
-
-    <hr>
+  </section>
+    <!-- <hr> -->
   <h3>
    Info
   </h3>
@@ -379,6 +357,130 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      (function () {
+        function setupNewsScrollbar(shell) {
+          var scroller = shell.querySelector('.news-window');
+          var track = shell.querySelector('.news-scroll-indicator');
+          var thumb = shell.querySelector('.news-scroll-thumb');
+          var scrollTimer;
+
+          if (!scroller || !track || !thumb) {
+            return;
+          }
+
+          function updateThumb() {
+            var totalHeight = scroller.scrollHeight;
+            var visibleHeight = scroller.clientHeight;
+            var trackHeight = track.clientHeight;
+
+            if (totalHeight <= visibleHeight || trackHeight <= 0) {
+              shell.classList.add('is-scrollless');
+              return;
+            }
+
+            shell.classList.remove('is-scrollless');
+
+            var thumbHeight = Math.max(38, Math.round(trackHeight * visibleHeight / totalHeight));
+            var maxThumbTop = Math.max(trackHeight - thumbHeight, 0);
+            var maxScrollTop = Math.max(totalHeight - visibleHeight, 1);
+            var thumbTop = Math.round(maxThumbTop * scroller.scrollTop / maxScrollTop);
+
+            thumb.style.height = thumbHeight + 'px';
+            thumb.style.transform = 'translateY(' + thumbTop + 'px)';
+          }
+
+          function showDuringScroll() {
+            shell.classList.add('is-scrolling');
+            updateThumb();
+            window.clearTimeout(scrollTimer);
+            scrollTimer = window.setTimeout(function () {
+              shell.classList.remove('is-scrolling');
+            }, 900);
+          }
+
+          function clamp(value, min, max) {
+            return Math.max(min, Math.min(value, max));
+          }
+
+          function scrollFromTrackPosition(pointerY) {
+            var trackRect = track.getBoundingClientRect();
+            var trackRange = track.clientHeight - thumb.offsetHeight;
+            var scrollRange = scroller.scrollHeight - scroller.clientHeight;
+            var thumbTop = pointerY - trackRect.top - thumb.offsetHeight / 2;
+
+            if (trackRange <= 0 || scrollRange <= 0) {
+              return;
+            }
+
+            scroller.scrollTop = scrollRange * clamp(thumbTop, 0, trackRange) / trackRange;
+            updateThumb();
+          }
+
+          thumb.addEventListener('mousedown', function (event) {
+            var startY = event.clientY;
+            var startScrollTop = scroller.scrollTop;
+            var trackRange = track.clientHeight - thumb.offsetHeight;
+            var scrollRange = scroller.scrollHeight - scroller.clientHeight;
+
+            if (event.button !== 0 || trackRange <= 0 || scrollRange <= 0) {
+              return;
+            }
+
+            shell.classList.add('is-dragging');
+            document.body.classList.add('news-scrollbar-active');
+            event.preventDefault();
+
+            function dragThumb(dragEvent) {
+              var deltaY = dragEvent.clientY - startY;
+              scroller.scrollTop = startScrollTop + deltaY * scrollRange / trackRange;
+              updateThumb();
+              dragEvent.preventDefault();
+            }
+
+            function stopDragging() {
+              shell.classList.remove('is-dragging');
+              document.body.classList.remove('news-scrollbar-active');
+              document.removeEventListener('mousemove', dragThumb);
+              document.removeEventListener('mouseup', stopDragging);
+              showDuringScroll();
+            }
+
+            document.addEventListener('mousemove', dragThumb);
+            document.addEventListener('mouseup', stopDragging);
+          });
+
+          track.addEventListener('mousedown', function (event) {
+            if (event.button !== 0 || event.target === thumb) {
+              return;
+            }
+
+            scrollFromTrackPosition(event.clientY);
+            showDuringScroll();
+            event.preventDefault();
+          });
+
+          scroller.addEventListener('scroll', showDuringScroll, { passive: true });
+          scroller.addEventListener('mouseenter', updateThumb);
+          scroller.addEventListener('focus', updateThumb);
+          window.addEventListener('resize', updateThumb);
+          updateThumb();
+        }
+
+        function initNewsScrollbars() {
+          var shells = document.getElementsByClassName('news-window-shell');
+          for (var i = 0; i < shells.length; i++) {
+            setupNewsScrollbar(shells[i]);
+          }
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initNewsScrollbars);
+        } else {
+          initNewsScrollbars();
+        }
+      }());
+    </script>
 
   </body>
 </html>

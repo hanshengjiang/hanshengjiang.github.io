@@ -147,14 +147,14 @@ html {
 
 /* Add these rules for nav link colors */
 .navbar-nav .nav-link {
-  color: #005A9C !important; /* Default link blue */
+  color: #0b8793 !important; /* Default link teal */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #3F88C5 !important; /* Hover link blue */
+  color: #d96f1f !important; /* Hover link orange */
 }
 
-/* Ensure active link also uses the default blue */
+/* Ensure active link also uses the default color */
 .navbar-nav .nav-link.active {
    color: #777 !important;
    /* Bootstrap might make active links bolder, uncomment below if you want to force the light weight */
@@ -184,8 +184,13 @@ ul{
 
 h1, h2, h3, h4, h5, h6 {
 /*  font-family: "Times New Roman", Times, serif;*/
-  color:black !important;
+  color: #d96f1f !important;
   font-weight: 200;
+}
+
+.subsection-heading {
+  font-size: 1.35rem;
+  font-weight: 300;
 }
 
 
@@ -220,25 +225,153 @@ p {
   font-size: 18px;
 }
 
-.hidden {
-  display: none;
-}
-
-#toggleLink {
-  /*color: black;*/
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-}
-
 .date {
     display: inline-block;
     color: #777;
     width: 100px; /* Adjust the width as needed */
     margin-right: 0px; /* Adjust the margin as needed */
+}
+
+.news-section {
+  margin: 2rem 0 2.1rem;
+}
+
+.news-window-shell {
+  position: relative;
+  margin-top: 0.25rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.news-window {
+  max-height: 370px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.25rem 1.05rem 0.25rem 0;
+  scrollbar-width: none;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.news-window::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.news-window:focus {
+  outline: 1px solid rgba(11, 135, 147, 0.35);
+  outline-offset: 3px;
+}
+
+.news-scroll-indicator {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.15rem;
+  bottom: 0.65rem;
+  width: 4px;
+  border-radius: 999px;
+  background-color: rgba(11, 135, 147, 0.11);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 0.18s ease;
+}
+
+.news-scroll-thumb {
+  display: block;
+  width: 100%;
+  min-height: 38px;
+  border-radius: 999px;
+  background-color: rgba(11, 135, 147, 0.48);
+  transform: translateY(0);
+  cursor: grab;
+  transition: background-color 0.18s ease;
+}
+
+body.news-scrollbar-active {
+  user-select: none;
+  cursor: grabbing;
+}
+
+.news-window-shell:hover .news-scroll-indicator,
+.news-window-shell:focus-within .news-scroll-indicator,
+.news-window-shell.is-scrolling .news-scroll-indicator {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.news-window-shell:hover .news-scroll-thumb,
+.news-window-shell:focus-within .news-scroll-thumb,
+.news-window-shell.is-scrolling .news-scroll-thumb,
+.news-window-shell.is-dragging .news-scroll-thumb {
+  background-color: rgba(11, 135, 147, 0.68);
+}
+
+.news-window-shell.is-dragging .news-scroll-indicator {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.news-window-shell.is-dragging .news-scroll-thumb {
+  cursor: grabbing;
+}
+
+.news-window-shell.is-scrollless .news-scroll-indicator {
+  display: none;
+}
+
+.news-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  padding: 0.55rem 0;
+}
+
+.news-list .date {
+  flex: 0 0 88px;
+  width: auto;
+  margin-right: 0;
+  font-size: 17px;
+}
+
+.news-list .lead:not(.date) {
+  flex: 1;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .news-scroll-indicator {
+    width: 3px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .news-window-shell:hover .news-scroll-indicator {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .news-window-shell:focus-within .news-scroll-indicator,
+  .news-window-shell.is-scrolling .news-scroll-indicator {
+    opacity: 0.85;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .news-window {
+    max-height: 55vh;
+    padding-right: 0.75rem;
+  }
+
+  .news-list li {
+    display: block;
+  }
+
+  .news-list .date {
+    display: block;
+    width: auto;
+    margin-bottom: 0.12rem;
+  }
 }
 
 
@@ -267,77 +400,77 @@ body {
 /*-------------------------------------------------- */
 
 .btn-code {
-  background-color: #EAFAF1; 
-  color: #1D8348;
-  border: 1px solid #1D8348;
+  background-color: #F7FCF9;
+  color: #5f7567;
+  border: 1px solid #DDEEE4;
 }
 
 .btn-abstract{
-  background-color: #EAF0F8; 
-  color: #2C4B60;
-  border: 1px solid #2C4B60;
+  background-color: #F7F9FC;
+  color: #66717F;
+  border: 1px solid #DDE5EF;
 }
 
 .btn-pdf {
-  background-color: #FDEDEC; 
-  color: #C0392B;
-  border: 1px solid #C0392B;
+  background-color: #FEF8F8;
+  color: #8A6969;
+  border: 1px solid #F0DCDC;
 }
 
 .btn-slides {
-  background-color: #FFF2E0; 
-  color: #BF6900;
-  border: 1px solid #BF6900;
+  background-color: #FFFCF7;
+  color: #8B755C;
+  border: 1px solid #F1E5D1;
 }
 
 .btn-data {
-  background-color: #F5EEFC; 
-  color: #6C3483;
-  border: 1px solid #6C3483;
+  background-color: #FCFAFE;
+  color: #74667C;
+  border: 1px solid #E9DFF1;
 }
 
 .btn-journal {
-  background-color: #CCECFF; 
-  color: #3F88C5;
-  border: 1px solid #3F88C5;
+  background-color: #F7FCFC;
+  color: #5A767A;
+  border: 1px solid #D7ECEF;
 }
 
 .btn-proceeding {
-  background-color: #FFF8E1;
-  color: #6B4F00;
-  border: 1px solid #6B4F00;
+  background-color: #FFFDF7;
+  color: #7B715F;
+  border: 1px solid #EEE7C9;
 }
 
 .btn-arxiv {
-  background-color: #FEF7F7; 
-  color: #CD5C5C;
-  border: 1px solid #CD5C5C;
+  background-color: #FEFAFA;
+  color: #8A6B6B;
+  border: 1px solid #EFDDDD;
 }
 
 .btn-ssrn {
-  background-color: #D2E3FA; 
-  color: #1D2E50;
-  border: 1px solid #1D2E50;
+  background-color: #F8FBFF;
+  color: #657180;
+  border: 1px solid #DAE6F4;
 }
 
 .btn-misc {
-  background-color: #fae095; 
-  color: #4A3700;
-  border: 1px solid #4A3700;
+  background-color: #FFFCF4;
+  color: #7A715F;
+  border: 1px solid #EEE3BE;
 }
 
 .btn-link {
-  color: #005A9C !important;
+  color: #0b8793 !important;
 }
 .btn-link:hover {
-  color: #3F88C5 !important;
+  color: #d96f1f !important;
 }
 
 a {
-  color: #005A9C; /* Brighter navy-blue */
+  color: #0b8793;
 }
 a:hover {
-  color: #3F88C5; /* Slightly darker on hover */
+  color: #d96f1f;
 }
 
 /* End of Button styles */
@@ -353,125 +486,128 @@ body.research-page {
 }
 
 .research-page p.lead a.btn {
+  color: #69737c;
   font-size: 0.82rem;
   line-height: 1.2;
   padding: 0.1rem 0.38rem !important;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  box-shadow: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .research-page p.lead a.btn:hover,
 .research-page p.lead a.btn:focus {
+  color: #4f5963;
   text-decoration: none;
 }
 
 .research-page p.lead a.btn-code {
-  background-color: rgba(234, 250, 241, 0.6);
-  border-color: rgba(29, 131, 72, 0.55);
+  background-color: rgba(234, 250, 241, 0.22);
+  border-color: rgba(29, 131, 72, 0.22);
 }
 
 .research-page p.lead a.btn-abstract {
-  background-color: rgba(234, 240, 248, 0.6);
-  border-color: rgba(44, 75, 96, 0.55);
+  background-color: rgba(234, 240, 248, 0.22);
+  border-color: rgba(44, 75, 96, 0.2);
 }
 
 .research-page p.lead a.btn-pdf {
-  background-color: rgba(253, 237, 236, 0.6);
-  border-color: rgba(192, 57, 43, 0.55);
+  background-color: rgba(253, 237, 236, 0.22);
+  border-color: rgba(192, 57, 43, 0.2);
 }
 
 .research-page p.lead a.btn-slides {
-  background-color: rgba(255, 242, 224, 0.6);
-  border-color: rgba(191, 105, 0, 0.55);
+  background-color: rgba(255, 242, 224, 0.24);
+  border-color: rgba(191, 105, 0, 0.2);
 }
 
 .research-page p.lead a.btn-data {
-  background-color: rgba(245, 238, 252, 0.6);
-  border-color: rgba(108, 52, 131, 0.55);
+  background-color: rgba(245, 238, 252, 0.22);
+  border-color: rgba(108, 52, 131, 0.2);
 }
 
 .research-page p.lead a.btn-journal {
-  background-color: rgba(204, 236, 255, 0.6);
-  border-color: rgba(63, 136, 197, 0.55);
+  background-color: rgba(227, 245, 247, 0.22);
+  border-color: rgba(11, 135, 147, 0.22);
 }
 
 .research-page p.lead a.btn-proceeding {
-  background-color: rgba(255, 248, 225, 0.6);
-  border-color: rgba(107, 79, 0, 0.55);
+  background-color: rgba(255, 248, 225, 0.24);
+  border-color: rgba(107, 79, 0, 0.2);
 }
 
 .research-page p.lead a.btn-arxiv {
-  background-color: rgba(254, 247, 247, 0.6);
-  border-color: rgba(205, 92, 92, 0.55);
+  background-color: rgba(254, 247, 247, 0.22);
+  border-color: rgba(205, 92, 92, 0.2);
 }
 
 .research-page p.lead a.btn-ssrn {
-  background-color: rgba(210, 227, 250, 0.6);
-  border-color: rgba(29, 46, 80, 0.55);
+  background-color: rgba(210, 227, 250, 0.22);
+  border-color: rgba(29, 46, 80, 0.2);
 }
 
 .research-page p.lead a.btn-misc {
-  background-color: rgba(250, 224, 149, 0.6);
-  border-color: rgba(74, 55, 0, 0.55);
+  background-color: rgba(250, 224, 149, 0.2);
+  border-color: rgba(74, 55, 0, 0.2);
 }
 
 .research-page p.lead a.btn-code:hover,
 .research-page p.lead a.btn-code:focus {
-  background-color: rgba(234, 250, 241, 0.78);
-  border-color: rgba(29, 131, 72, 0.72);
+  background-color: rgba(234, 250, 241, 0.38);
+  border-color: rgba(29, 131, 72, 0.32);
 }
 
 .research-page p.lead a.btn-abstract:hover,
 .research-page p.lead a.btn-abstract:focus {
-  background-color: rgba(234, 240, 248, 0.78);
-  border-color: rgba(44, 75, 96, 0.72);
+  background-color: rgba(234, 240, 248, 0.36);
+  border-color: rgba(44, 75, 96, 0.3);
 }
 
 .research-page p.lead a.btn-pdf:hover,
 .research-page p.lead a.btn-pdf:focus {
-  background-color: rgba(253, 237, 236, 0.78);
-  border-color: rgba(192, 57, 43, 0.72);
+  background-color: rgba(253, 237, 236, 0.36);
+  border-color: rgba(192, 57, 43, 0.3);
 }
 
 .research-page p.lead a.btn-slides:hover,
 .research-page p.lead a.btn-slides:focus {
-  background-color: rgba(255, 242, 224, 0.78);
-  border-color: rgba(191, 105, 0, 0.72);
+  background-color: rgba(255, 242, 224, 0.38);
+  border-color: rgba(191, 105, 0, 0.3);
 }
 
 .research-page p.lead a.btn-data:hover,
 .research-page p.lead a.btn-data:focus {
-  background-color: rgba(245, 238, 252, 0.78);
-  border-color: rgba(108, 52, 131, 0.72);
+  background-color: rgba(245, 238, 252, 0.36);
+  border-color: rgba(108, 52, 131, 0.3);
 }
 
 .research-page p.lead a.btn-journal:hover,
 .research-page p.lead a.btn-journal:focus {
-  background-color: rgba(204, 236, 255, 0.78);
-  border-color: rgba(63, 136, 197, 0.72);
+  background-color: rgba(227, 245, 247, 0.38);
+  border-color: rgba(11, 135, 147, 0.32);
 }
 
 .research-page p.lead a.btn-proceeding:hover,
 .research-page p.lead a.btn-proceeding:focus {
-  background-color: rgba(255, 248, 225, 0.78);
-  border-color: rgba(107, 79, 0, 0.72);
+  background-color: rgba(255, 248, 225, 0.38);
+  border-color: rgba(107, 79, 0, 0.3);
 }
 
 .research-page p.lead a.btn-arxiv:hover,
 .research-page p.lead a.btn-arxiv:focus {
-  background-color: rgba(254, 247, 247, 0.78);
-  border-color: rgba(205, 92, 92, 0.72);
+  background-color: rgba(254, 247, 247, 0.36);
+  border-color: rgba(205, 92, 92, 0.3);
 }
 
 .research-page p.lead a.btn-ssrn:hover,
 .research-page p.lead a.btn-ssrn:focus {
-  background-color: rgba(210, 227, 250, 0.78);
-  border-color: rgba(29, 46, 80, 0.72);
+  background-color: rgba(210, 227, 250, 0.36);
+  border-color: rgba(29, 46, 80, 0.3);
 }
 
 .research-page p.lead a.btn-misc:hover,
 .research-page p.lead a.btn-misc:focus {
-  background-color: rgba(250, 224, 149, 0.78);
-  border-color: rgba(74, 55, 0, 0.72);
+  background-color: rgba(250, 224, 149, 0.34);
+  border-color: rgba(74, 55, 0, 0.3);
 }
 
 /* Award styles in Research Page */
@@ -496,12 +632,12 @@ b, strong {
 }
 
 .paper-title-link {
-  color: #005A9C; /* Change to your desired color */
+  color: #0b8793;
   font-weight: 500; /* Apply your desired weight */
   font-size: 18px;
 }
 .paper-title-link:hover {
-  color: #3F88C5; /* Change to your desired hover color */
+  color: #d96f1f;
   font-weight: 500; /* Apply your desired weight */
   font-size: 18px;
 }
