@@ -324,7 +324,7 @@ body.news-scrollbar-active {
   display: flex;
   align-items: baseline;
   gap: 0.65rem;
-  padding: 0.55rem 0;
+  padding: 0.34rem 0;
 }
 
 .news-list .date {
@@ -365,6 +365,7 @@ body.news-scrollbar-active {
 
   .news-list li {
     display: block;
+    padding: 0.42rem 0;
   }
 
   .news-list .date {
