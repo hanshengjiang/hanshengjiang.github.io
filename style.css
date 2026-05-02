@@ -244,7 +244,7 @@ p {
 }
 
 .news-window {
-  max-height: 370px;
+  max-height: 260px;
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 0.25rem 1.05rem 0.25rem 0;
@@ -359,7 +359,7 @@ body.news-scrollbar-active {
 
 @media (max-width: 575.98px) {
   .news-window {
-    max-height: 55vh;
+    max-height: 40vh;
     padding-right: 0.75rem;
   }
 
