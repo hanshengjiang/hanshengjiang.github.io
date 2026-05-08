@@ -134,7 +134,7 @@
     </p> 
 
     <p class="lead"> 
-        Before joining the University of Toronto, I earned my Ph.D. in Industrial Engineering and Operations Research from the University of California, Berkeley, advised by <a href="https://zj-maxshen.github.io/" target= "_blank"> Max Shen</a> and <a href="https://www.stat.berkeley.edu/~aditya/index.html" target = "_blank">Aditya Guntuboyina</a>. 
+        Before joining the University of Toronto, I received my Ph.D. in Industrial Engineering and Operations Research (Ph.D. minor in Statistics) from the University of California, Berkeley, advised by <a href="https://zj-maxshen.github.io/" target= "_blank"> Max Shen</a> and <a href="https://www.stat.berkeley.edu/~aditya/index.html" target = "_blank">Aditya Guntuboyina</a>.
         <!-- During my doctoral studies, I gained industry experience as a Research Scientist at Amazon's Supply Chain Optimization Technologies team and Alibaba Cloud.--> Prior to Berkeley, I received my B.S. in Mathematics from USTC. 
     </p>
 <!-- <hr> -->
@@ -144,7 +144,7 @@
    News
   </h3>
     <div class="news-window-shell">
-    <div class="news-window" tabindex="0" aria-label="Scrollable news updates">
+    <div class="news-window" data-visible-rows="4" tabindex="0" aria-label="Scrollable news updates">
     <ul class="news-list">
         
         <!--
@@ -369,6 +369,7 @@
             return;
           }
 
+<<<<<<< Updated upstream
           function fitVisibleNewsItems() {
             scroller.style.maxHeight = '';
             var items = scroller.querySelectorAll('.news-list > li');
@@ -388,6 +389,31 @@
             }
 
             scroller.style.maxHeight = (Math.ceil(height) + 1) + 'px';
+=======
+          function updateVisibleRowsHeight() {
+            var visibleRows = parseInt(scroller.getAttribute('data-visible-rows'), 10);
+
+            if (!visibleRows || visibleRows < 1) {
+              return;
+            }
+
+            var items = Array.prototype.slice.call(scroller.querySelectorAll('.news-list > li')).filter(function (item) {
+              return item.offsetParent !== null;
+            });
+
+            if (!items.length) {
+              return;
+            }
+
+            var lastVisibleItem = items[Math.min(visibleRows, items.length) - 1];
+            var scrollerRect = scroller.getBoundingClientRect();
+            var itemRect = lastVisibleItem.getBoundingClientRect();
+            var scrollerStyle = window.getComputedStyle(scroller);
+            var paddingBottom = parseFloat(scrollerStyle.paddingBottom) || 0;
+            var visibleHeight = Math.ceil(itemRect.bottom - scrollerRect.top + paddingBottom);
+
+            scroller.style.setProperty('--news-window-visible-height', visibleHeight + 'px');
+>>>>>>> Stashed changes
           }
 
           function updateThumb() {
@@ -418,6 +444,11 @@
             scrollTimer = window.setTimeout(function () {
               shell.classList.remove('is-scrolling');
             }, 900);
+          }
+
+          function syncNewsWindow() {
+            updateVisibleRowsHeight();
+            updateThumb();
           }
 
           function clamp(value, min, max) {
@@ -487,10 +518,18 @@
           });
 
           scroller.addEventListener('scroll', showDuringScroll, { passive: true });
+<<<<<<< Updated upstream
           scroller.addEventListener('mouseenter', updateThumb);
           scroller.addEventListener('focus', updateThumb);
           window.addEventListener('resize', refreshNewsWindow);
           refreshNewsWindow();
+=======
+          scroller.addEventListener('mouseenter', syncNewsWindow);
+          scroller.addEventListener('focus', syncNewsWindow);
+          window.addEventListener('resize', syncNewsWindow);
+          window.addEventListener('load', syncNewsWindow);
+          syncNewsWindow();
+>>>>>>> Stashed changes
         }
 
         function initNewsScrollbars() {

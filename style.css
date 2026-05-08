@@ -244,7 +244,12 @@ p {
 }
 
 .news-window {
+<<<<<<< Updated upstream
   max-height: 260px;
+=======
+  --news-window-visible-height: 370px;
+  max-height: var(--news-window-visible-height);
+>>>>>>> Stashed changes
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 0.25rem 1.05rem 0.25rem 0;
@@ -359,7 +364,11 @@ body.news-scrollbar-active {
 
 @media (max-width: 575.98px) {
   .news-window {
+<<<<<<< Updated upstream
     max-height: 40vh;
+=======
+    max-height: min(var(--news-window-visible-height), 55vh);
+>>>>>>> Stashed changes
     padding-right: 0.75rem;
   }
 
@@ -422,6 +431,12 @@ body {
   background-color: #FFFCF7;
   color: #8B755C;
   border: 1px solid #F1E5D1;
+}
+
+.btn-poster {
+  background-color: #F8FAFF;
+  color: #6A6F8A;
+  border: 1px solid #E1E6F7;
 }
 
 .btn-data {
@@ -521,6 +536,11 @@ body.research-page {
   border-color: rgba(191, 105, 0, 0.2);
 }
 
+.research-page p.lead a.btn-poster {
+  background-color: rgba(232, 238, 255, 0.24);
+  border-color: rgba(67, 86, 140, 0.2);
+}
+
 .research-page p.lead a.btn-data {
   background-color: rgba(245, 238, 252, 0.22);
   border-color: rgba(108, 52, 131, 0.2);
@@ -573,6 +593,12 @@ body.research-page {
 .research-page p.lead a.btn-slides:focus {
   background-color: rgba(255, 242, 224, 0.38);
   border-color: rgba(191, 105, 0, 0.3);
+}
+
+.research-page p.lead a.btn-poster:hover,
+.research-page p.lead a.btn-poster:focus {
+  background-color: rgba(232, 238, 255, 0.4);
+  border-color: rgba(67, 86, 140, 0.3);
 }
 
 .research-page p.lead a.btn-data:hover,
