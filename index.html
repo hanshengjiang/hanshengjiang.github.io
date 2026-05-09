@@ -369,27 +369,6 @@
             return;
           }
 
-<<<<<<< Updated upstream
-          function fitVisibleNewsItems() {
-            scroller.style.maxHeight = '';
-            var items = scroller.querySelectorAll('.news-list > li');
-            var heightLimit = parseFloat(window.getComputedStyle(scroller).maxHeight);
-            var height = 0;
-
-            if (!items.length || isNaN(heightLimit)) {
-              return;
-            }
-
-            for (var i = 0; i < items.length; i++) {
-              var itemHeight = items[i].getBoundingClientRect().height;
-              if (height > 0 && height + itemHeight > heightLimit) {
-                break;
-              }
-              height += itemHeight;
-            }
-
-            scroller.style.maxHeight = (Math.ceil(height) + 1) + 'px';
-=======
           function updateVisibleRowsHeight() {
             var visibleRows = parseInt(scroller.getAttribute('data-visible-rows'), 10);
 
@@ -413,7 +392,6 @@
             var visibleHeight = Math.ceil(itemRect.bottom - scrollerRect.top + paddingBottom);
 
             scroller.style.setProperty('--news-window-visible-height', visibleHeight + 'px');
->>>>>>> Stashed changes
           }
 
           function updateThumb() {
@@ -469,11 +447,6 @@
             updateThumb();
           }
 
-          function refreshNewsWindow() {
-            fitVisibleNewsItems();
-            updateThumb();
-          }
-
           thumb.addEventListener('mousedown', function (event) {
             var startY = event.clientY;
             var startScrollTop = scroller.scrollTop;
@@ -518,18 +491,11 @@
           });
 
           scroller.addEventListener('scroll', showDuringScroll, { passive: true });
-<<<<<<< Updated upstream
-          scroller.addEventListener('mouseenter', updateThumb);
-          scroller.addEventListener('focus', updateThumb);
-          window.addEventListener('resize', refreshNewsWindow);
-          refreshNewsWindow();
-=======
           scroller.addEventListener('mouseenter', syncNewsWindow);
           scroller.addEventListener('focus', syncNewsWindow);
           window.addEventListener('resize', syncNewsWindow);
           window.addEventListener('load', syncNewsWindow);
           syncNewsWindow();
->>>>>>> Stashed changes
         }
 
         function initNewsScrollbars() {

@@ -244,12 +244,8 @@ p {
 }
 
 .news-window {
-<<<<<<< Updated upstream
-  max-height: 260px;
-=======
-  --news-window-visible-height: 370px;
+  --news-window-visible-height: 260px;
   max-height: var(--news-window-visible-height);
->>>>>>> Stashed changes
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 0.25rem 1.05rem 0.25rem 0;
@@ -364,11 +360,7 @@ body.news-scrollbar-active {
 
 @media (max-width: 575.98px) {
   .news-window {
-<<<<<<< Updated upstream
-    max-height: 40vh;
-=======
-    max-height: min(var(--news-window-visible-height), 55vh);
->>>>>>> Stashed changes
+    max-height: var(--news-window-visible-height);
     padding-right: 0.75rem;
   }
 
