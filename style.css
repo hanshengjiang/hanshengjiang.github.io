@@ -154,9 +154,9 @@ html {
   color: #d96f1f !important; /* Hover link orange */
 }
 
-/* Ensure active link also uses the default color */
+/* Ensure active link uses the theme orange color */
 .navbar-nav .nav-link.active {
-   color: #777 !important;
+   color: #d96f1f !important;
    /* Bootstrap might make active links bolder, uncomment below if you want to force the light weight */
    /* font-weight: 100 !important; */
 }
