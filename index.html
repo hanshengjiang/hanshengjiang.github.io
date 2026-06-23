@@ -356,14 +356,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
       (function () {
         function setupNewsScrollbar(shell) {
           var scroller = shell.querySelector('.news-window');
           var track = shell.querySelector('.news-scroll-indicator');
           var thumb = shell.querySelector('.news-scroll-thumb');
+          var newsList = shell.querySelector('.news-list');
           var scrollTimer;
+          var syncFrame;
 
           if (!scroller || !track || !thumb) {
             return;
@@ -389,9 +390,11 @@
             var itemRect = lastVisibleItem.getBoundingClientRect();
             var scrollerStyle = window.getComputedStyle(scroller);
             var paddingBottom = parseFloat(scrollerStyle.paddingBottom) || 0;
-            var visibleHeight = Math.ceil(itemRect.bottom - scrollerRect.top + paddingBottom);
+            var visibleHeight = Math.ceil(itemRect.bottom - scrollerRect.top + scroller.scrollTop + paddingBottom);
 
-            scroller.style.setProperty('--news-window-visible-height', visibleHeight + 'px');
+            if (visibleHeight > 0) {
+              scroller.style.setProperty('--news-window-visible-height', visibleHeight + 'px');
+            }
           }
 
           function updateThumb() {
@@ -399,14 +402,16 @@
             var visibleHeight = scroller.clientHeight;
             var trackHeight = track.clientHeight;
 
-            if (totalHeight <= visibleHeight || trackHeight <= 0) {
+            if (totalHeight <= visibleHeight + 1 || trackHeight <= 0) {
               shell.classList.add('is-scrollless');
+              thumb.style.height = '0px';
+              thumb.style.transform = 'translateY(0)';
               return;
             }
 
             shell.classList.remove('is-scrollless');
 
-            var thumbHeight = Math.max(38, Math.round(trackHeight * visibleHeight / totalHeight));
+            var thumbHeight = Math.min(trackHeight, Math.max(38, Math.round(trackHeight * visibleHeight / totalHeight)));
             var maxThumbTop = Math.max(trackHeight - thumbHeight, 0);
             var maxScrollTop = Math.max(totalHeight - visibleHeight, 1);
             var thumbTop = Math.round(maxThumbTop * scroller.scrollTop / maxScrollTop);
@@ -427,6 +432,11 @@
           function syncNewsWindow() {
             updateVisibleRowsHeight();
             updateThumb();
+          }
+
+          function requestSyncNewsWindow() {
+            window.cancelAnimationFrame(syncFrame);
+            syncFrame = window.requestAnimationFrame(syncNewsWindow);
           }
 
           function clamp(value, min, max) {
@@ -491,11 +501,24 @@
           });
 
           scroller.addEventListener('scroll', showDuringScroll, { passive: true });
-          scroller.addEventListener('mouseenter', syncNewsWindow);
-          scroller.addEventListener('focus', syncNewsWindow);
-          window.addEventListener('resize', syncNewsWindow);
-          window.addEventListener('load', syncNewsWindow);
-          syncNewsWindow();
+          scroller.addEventListener('mouseenter', requestSyncNewsWindow);
+          scroller.addEventListener('focus', requestSyncNewsWindow);
+          window.addEventListener('resize', requestSyncNewsWindow);
+          window.addEventListener('load', requestSyncNewsWindow);
+
+          if (window.ResizeObserver) {
+            var resizeObserver = new ResizeObserver(requestSyncNewsWindow);
+            resizeObserver.observe(scroller);
+            if (newsList) {
+              resizeObserver.observe(newsList);
+            }
+          }
+
+          if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(requestSyncNewsWindow);
+          }
+
+          requestSyncNewsWindow();
         }
 
         function initNewsScrollbars() {
