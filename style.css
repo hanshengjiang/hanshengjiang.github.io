@@ -642,6 +642,10 @@ body.research-page {
   color: inherit;
 }
 
+.academic-service-list > li + li {
+  margin-top: 0.75rem;
+}
+
 /* Paper styles in Research Page */
 
 b, strong {
