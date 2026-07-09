@@ -628,11 +628,18 @@ body.research-page {
   font-size: 18px;
 }
 
-/* Outlet styles in Research Page */
+/* Author and outlet styles in Research Page */
+.author-text,
 .outlet-text {
   color: black;   /* Change to your desired color */
   font-weight: 300;
   font-size: 18px;
+}
+
+.author-text a,
+.author-text a:hover,
+.author-text a:focus {
+  color: inherit;
 }
 
 /* Paper styles in Research Page */
