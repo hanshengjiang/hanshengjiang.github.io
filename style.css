@@ -133,15 +133,15 @@ html {
 }
 
 .profile-name-given {
-  color: #08717a;
-}
-
-.profile-name-family {
   color: #d96f1f;
 }
 
-.profile-name-link:hover .profile-name-given,
-.profile-name-link:focus .profile-name-given {
+.profile-name-family {
+  color: #08717a;
+}
+
+.profile-name-link:hover .profile-name-family,
+.profile-name-link:focus .profile-name-family {
   color: #d96f1f;
 }
 
