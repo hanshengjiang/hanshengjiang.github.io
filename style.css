@@ -122,6 +122,35 @@ html {
   border-radius: 18%;
 }
 
+.profile-name {
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.profile-name strong {
+  font-weight: 600;
+}
+
+.profile-name-given {
+  color: #08717a;
+}
+
+.profile-name-family {
+  color: #d96f1f;
+}
+
+.profile-name-link:hover .profile-name-given,
+.profile-name-link:focus .profile-name-given {
+  color: #d96f1f;
+}
+
+.profile-pronouns {
+  color: #777;
+  font-size: 12px;
+  font-weight: 400;
+}
+
 .navbar-nav {
   font-size: 1.6rem !important;
   font-weight: 200 !important;
@@ -322,6 +351,7 @@ body.news-scrollbar-active {
 
 .news-list .lead:not(.date) {
   flex: 1;
+  color: black;
   font-size: 16.5px;
   font-weight: 300;
   line-height: 1.45;
