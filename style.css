@@ -151,9 +151,15 @@ html {
   font-weight: 400;
 }
 
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
 .navbar-nav {
   font-size: 1.6rem !important;
-  font-weight: 200 !important;
+  font-weight: 400 !important;
 }
 
 /* Add these rules for nav link colors */
