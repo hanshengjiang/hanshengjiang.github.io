@@ -115,7 +115,15 @@
 .bot200 { margin-bottom:200px; }
 
 html {
+  --site-navbar-height: 4.5rem;
   font-size: 0.9rem;
+  scrollbar-gutter: stable;
+  scroll-padding-top: calc(var(--site-navbar-height) + 1rem);
+}
+
+body {
+  /* A fixed header is removed from normal flow, so reserve its space here. */
+  padding-top: var(--site-navbar-height);
 }
 
 .round_more {
@@ -151,10 +159,26 @@ html {
   font-weight: 400;
 }
 
-.navbar {
-  position: sticky;
+.site-navbar {
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  min-height: var(--site-navbar-height);
   z-index: 1030;
+  background-color: #f8f9fa !important;
+
+  /* Keep the fixed bar on its own composited layer to avoid scroll jitter. */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.site-navbar .navbar-toggler {
+  margin-left: auto;
 }
 
 .navbar-nav {
