@@ -117,6 +117,7 @@
 html {
   --site-navbar-height: 4.5rem;
   font-size: 0.9rem;
+  overscroll-behavior-y: none;
   scrollbar-gutter: stable;
   scroll-padding-top: calc(var(--site-navbar-height) + 1rem);
 }
