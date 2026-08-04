@@ -115,7 +115,7 @@
 .bot200 { margin-bottom:200px; }
 
 html {
-  --site-navbar-height: 4.5rem;
+  --site-navbar-height: 64px;
   font-size: 0.9rem;
   overscroll-behavior-y: none;
   scrollbar-gutter: stable;
@@ -124,6 +124,7 @@ html {
 
 body {
   /* A fixed header is removed from normal flow, so reserve its space here. */
+  overscroll-behavior-y: none;
   padding-top: var(--site-navbar-height);
 }
 
@@ -165,17 +166,10 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  width: 100%;
+  width: auto;
   min-height: var(--site-navbar-height);
   z-index: 1030;
   background-color: #f8f9fa !important;
-
-  /* Keep the fixed bar on its own composited layer to avoid scroll jitter. */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: transform;
 }
 
 .site-navbar .navbar-toggler {
