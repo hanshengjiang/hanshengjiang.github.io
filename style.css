@@ -1182,15 +1182,46 @@ a.paper-title-link:focus {
 
 @media (max-width: 991.98px) {
   .site-navbar {
+    height: var(--site-navbar-height);
+    flex-wrap: nowrap;
     background-color: var(--site-nav-surface) !important;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
+
+    /* Keep the fixed header on its own layer during mobile scrolling. */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+
+  .site-navbar .navbar-toggler {
+    min-width: 44px;
+    min-height: 44px;
+    flex: 0 0 auto;
+    touch-action: manipulation;
   }
 
   .site-navbar .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - var(--site-navbar-height));
+    max-height: calc(100svh - var(--site-navbar-height));
+    overflow-x: hidden;
+    overflow-y: auto;
     border-top: 1px solid var(--site-line);
     background-color: var(--site-nav-surface);
     box-shadow: 0 14px 22px rgba(30, 42, 48, 0.07);
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .site-navbar .navbar-collapse.collapsing {
+    overflow: hidden;
   }
 
   .navbar-nav {
@@ -1199,6 +1230,9 @@ a.paper-title-link:focus {
   }
 
   .navbar-nav .nav-link {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
     background-position: 1rem calc(100% - 0.2rem);
   }
 }
