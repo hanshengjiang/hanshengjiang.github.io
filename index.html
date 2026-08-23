@@ -20,12 +20,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&amp;display=swap" rel="stylesheet">
+
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"  integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css"> <!-- https://jpswalsh.github.io/academicons/  -->
 
-    <link href="style.css?v=20260803-nav" rel="stylesheet">
+    <link href="style.css?v=20260823-polish15" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/x-icon" href="icons/h_pink_favicon.ico">
 
@@ -42,10 +45,11 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav mx-auto">
         <a class="nav-item nav-link mx-3 active" href="index.html" aria-current="page">About</a>
-        <a class="nav-item nav-link mx-3 " href="research.html">Research</a>
+        <a class="nav-item nav-link mx-3" href="research.html">Research</a>
         <a class="nav-item nav-link mx-3" href="teaching.html">Teaching</a>
         <!--<a class="nav-item nav-link mx-3" href="experience.html">Industry</a>-->
-        <a class="nav-item nav-link mx-3" href="miscellaneous.html">Miscellaneous</a>
+        <a class="nav-item nav-link mx-3" href="recognition.html">Recognition</a>
+        <a class="nav-item nav-link mx-3" href="miscellaneous.html" aria-label="Miscellaneous">Misc.</a>
       </div>
     </div>
   </nav>
@@ -56,7 +60,7 @@
   <div class = "row" >
   <div class="profile col-md-3 ">
     <figure class="figure">
-      <img src="figures/hansheng_brick.jpeg" class="figure-img rounded-circle img-fluid" alt="Hansheng Jiang">
+      <img src="figures/hansheng_brick.jpeg" class="profile-portrait figure-img rounded-circle img-fluid" alt="Hansheng Jiang">
     </figure>
 
     <p class="profile-name text-center mb-0">
@@ -67,18 +71,18 @@
       </strong>
       <span class="profile-pronouns">(she/her)</span>
     </p>
-    <p class="text-center mb-0" style="font-size: 22px; color: #666; font-family: 'Noto Serif SC', 'STKaiti', 'KaiTi', 'BiauKai', '楷体', Georgia, serif;">
+    <p class="profile-name-chinese text-center mb-0" lang="zh-Hans">
       姜翰生
     </p>
     <p class="text-center mt-0">
-      <a style="font-size: 12px" href="https://translate.google.com/?sl=auto&amp;tl=zh-CN&amp;text=%E5%A7%9C%2C%20%E7%BF%B0%E7%94%9F%0A&amp;op=translate" target="_blank" rel="noopener noreferrer"><i>How to pronounce</i></a>
+      <a class="profile-pronunciation-link" href="https://translate.google.com/?sl=auto&amp;tl=zh-CN&amp;text=%E5%A7%9C%2C%20%E7%BF%B0%E7%94%9F%0A&amp;op=translate" target="_blank" rel="noopener noreferrer"><i>How to pronounce</i></a>
     </p>
-    <p class="text-center" style="font-size: 16px; text-align:center">
-      <span style="color:#555">Assistant Professor</span>
+    <p class="profile-position text-center">
+      <span>Assistant Professor</span>
       <br>
-      <span style="color:#555">Rotman School of Management</span>
+      <span>Rotman School of Management</span>
       <br>
-      <span style="color:#555">University of Toronto</span>
+      <span>University of Toronto</span>
       <br>
       <!--<a href="https://discover.research.utoronto.ca/53438-hansheng-jiang" target = "_blank" >University Profile</a>-->
     </p>
@@ -91,17 +95,17 @@
     </h5>
 
        <p>
-        <code style="font-size: 14px" class="text-dark" >hansheng.jiang[at]rotman.utoronto.ca</code>
+        <code class="profile-email text-dark">hansheng.jiang[at]rotman.utoronto.ca</code>
       <br>
-      <a href="mailto:hansheng.jiang@rotman.utoronto.ca" aria-label="Email Hansheng Jiang"><i class="fas fa-envelope-square fa-2x" style="color:#D3D3D3" aria-hidden="true"></i></a>
+      <a class="profile-social-link" href="mailto:hansheng.jiang@rotman.utoronto.ca" aria-label="Email Hansheng Jiang"><i class="fas fa-envelope-square fa-2x" aria-hidden="true"></i></a>
       &nbsp;
-      <a href="https://www.linkedin.com/in/hansheng-jiang-497535108/" target="_blank" rel="noopener noreferrer" aria-label="Hansheng Jiang on LinkedIn"><i class="fab fa-linkedin fa-2x" style="color:#D3D3D3" aria-hidden="true"></i></a>
+      <a class="profile-social-link" href="https://www.linkedin.com/in/hansheng-jiang-497535108/" target="_blank" rel="noopener noreferrer" aria-label="Hansheng Jiang on LinkedIn"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
       &nbsp;
-      <a href="https://github.com/hanshengjiang" target="_blank" rel="noopener noreferrer" aria-label="Hansheng Jiang on GitHub"><i class="fab fa-github fa-2x" style="color:#D3D3D3" aria-hidden="true"></i></a>
+      <a class="profile-social-link" href="https://github.com/hanshengjiang" target="_blank" rel="noopener noreferrer" aria-label="Hansheng Jiang on GitHub"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
       &nbsp;
       <!--<a href="https://www.researchgate.net/profile/Hansheng-Jiang" target="_blank"><i class= "ai ai-researchgate ai-2x" style="color:#D3D3D3" ></i> </a>
       &nbsp; -->
-      <a href="https://scholar.google.com/citations?user=LJ3dpxMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Hansheng Jiang on Google Scholar"><i class="ai ai-google-scholar-square ai-2x" style="color:#D3D3D3" aria-hidden="true"></i></a>
+      <a class="profile-social-link" href="https://scholar.google.com/citations?user=LJ3dpxMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Hansheng Jiang on Google Scholar"><i class="ai ai-google-scholar-square ai-2x" aria-hidden="true"></i></a>
       &nbsp;
           <!--
       <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3341674" target="_blank"><i class="ai ai-ssrn ai-2x" style="color:Silver"></i></a>
