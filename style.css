@@ -1054,10 +1054,16 @@ a.paper-title-link:focus {
   color: var(--site-research-meta);
 }
 
-.award-text {
-  color: var(--site-research-meta);
-  font-size: 18px;
+.research-page .award-text {
+  color: var(--site-muted);
+  font-size: 16px;
   font-weight: 300;
+  line-height: 1.45;
+}
+
+.research-page .award-text a:not(.btn) {
+  color: inherit;
+  font-weight: inherit;
 }
 
 .research-page .lead a.btn {
