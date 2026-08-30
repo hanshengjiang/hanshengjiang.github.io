@@ -1275,6 +1275,15 @@ a.paper-title-link:focus {
     align-items: center;
     background-position: 1rem calc(100% - 0.2rem);
   }
+
+  .navbar-nav .nav-link.active {
+    background-size: 0 2px;
+    text-decoration-color: currentColor !important;
+    text-decoration-line: underline !important;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 0.42rem;
+  }
 }
 
 @media (max-width: 575.98px) {
