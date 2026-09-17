@@ -1035,7 +1035,7 @@ body.research-page {
 
 .research-page .papers-heading {
   color: var(--site-ink) !important;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.35rem;
 }
 
 .research-page .paper-category-heading {
@@ -1043,7 +1043,8 @@ body.research-page {
   margin-bottom: 0.65rem;
 }
 
-.research-page .papers-heading + .paper-category-heading {
+.research-page .papers-heading + .paper-category-heading,
+.research-page .paper-legend + .paper-category-heading {
   margin-top: 0;
 }
 
@@ -1088,6 +1089,11 @@ a.paper-title-link:focus {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.45;
+}
+
+.research-page .paper-legend,
+.research-page .paper-category-note {
+  font-size: 14px;
 }
 
 .research-page .award-text a:not(.btn) {
