@@ -736,7 +736,8 @@ a.paper-title-link:hover {
   --site-heading: #3f474c;
   --site-muted: #666666;
   --site-muted-soft: #777777;
-  --site-icon-muted: #a0a7aa;
+  --site-icon-muted: #789799;
+  --site-icon-hover: var(--site-copper-dark);
   --site-nav-link: #0b8793;
   --site-teal: #0b8793;
   --site-teal-dark: #08717a;
@@ -990,8 +991,9 @@ button:focus-visible,
 }
 
 .profile-social-link:hover i,
-.profile-social-link:focus-visible i {
-  color: var(--site-copper-dark);
+.profile-social-link:focus i,
+.profile-social-link:active i {
+  color: var(--site-icon-hover);
   transform: translateY(-1px);
 }
 
@@ -1086,7 +1088,7 @@ a.paper-title-link:focus {
 
 .research-page .award-text {
   color: var(--site-muted);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.45;
 }
