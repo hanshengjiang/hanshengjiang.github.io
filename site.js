@@ -20,6 +20,9 @@
   const sections = [...document.querySelectorAll('[data-nav-section]')];
   let framePending = false;
   let headerHeight = 0;
+  let navigationTarget = null;
+  let navigationReached = false;
+  let navigationIdleTimer = null;
 
   function fragmentTarget(hash) {
     if (!hash || hash === '#') return null;
@@ -59,6 +62,17 @@
     if (restoreFocus) menuButton.focus();
   }
 
+  function selectNavigationTarget(target) {
+    window.clearTimeout(navigationIdleTimer);
+    navigationTarget = target;
+    navigationReached = false;
+    scheduleUpdate();
+  }
+
+  function resumeScrollTracking() {
+    if (navigationTarget) selectNavigationTarget(null);
+  }
+
   function updateActiveLink() {
     framePending = false;
     measureHeader();
@@ -75,6 +89,23 @@
       active = sections[sections.length - 1];
     }
 
+    if (navigationTarget) {
+      const margin = parseFloat(window.getComputedStyle(navigationTarget).scrollMarginTop) || 0;
+      const targetY = window.scrollY + navigationTarget.getBoundingClientRect().top - margin;
+      const maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      const destinationY = Math.max(0, Math.min(targetY, maxY));
+      const atDestination = Math.abs(window.scrollY - destinationY) <= 2;
+
+      // Short sections can share the same clamped scroll position. Honor the
+      // selected destination through smooth scrolling, until the reader moves on.
+      if (navigationReached && !atDestination) {
+        navigationTarget = null;
+      } else {
+        navigationReached = atDestination;
+        active = navigationTarget.closest('[data-nav-section]') || active;
+      }
+    }
+
     for (const link of links) {
       if (fragmentTarget(link.hash) === active) {
         link.setAttribute('aria-current', 'location');
@@ -85,6 +116,14 @@
   }
 
   function scheduleUpdate() {
+    if (navigationTarget && !navigationReached) {
+      window.clearTimeout(navigationIdleTimer);
+      navigationIdleTimer = window.setTimeout(() => {
+        // History may restore a manually scrolled position instead of the hash.
+        // Also release a native smooth scroll that was interrupted before arrival.
+        if (!navigationReached) resumeScrollTracking();
+      }, 150);
+    }
     if (framePending) return;
     framePending = true;
     window.requestAnimationFrame(updateActiveLink);
@@ -92,6 +131,7 @@
 
   function restoreFragment() {
     const target = fragmentTarget(window.location.hash);
+    selectNavigationTarget(target);
     if (target && (revealTarget(target) || target.closest('.news-window'))) {
       // Restore deep links after disclosure opening or news-window sizing.
       window.requestAnimationFrame(() => target.scrollIntoView({ block: 'start', behavior: 'instant' }));
@@ -107,6 +147,13 @@
   });
 
   document.addEventListener('keydown', (event) => {
+    if (!event.defaultPrevented &&
+        ['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key) &&
+        event.target instanceof Element &&
+        !event.target.closest('input, textarea, select, [contenteditable]') &&
+        !(event.key === ' ' && event.target.closest('button, summary, [role="button"]'))) {
+      resumeScrollTracking();
+    }
     if (event.key === 'Escape' && header.classList.contains('is-menu-open')) {
       setMenuOpen(false, true);
     }
@@ -121,6 +168,7 @@
 
     revealTarget(target);
     if (header.contains(link)) setMenuOpen(false);
+    selectNavigationTarget(target);
 
     // Move keyboard focus with the destination while keeping native link history.
     if (!target.hasAttribute('tabindex')) {
@@ -141,6 +189,11 @@
   });
 
   window.addEventListener('scroll', scheduleUpdate, { passive: true });
+  window.addEventListener('wheel', resumeScrollTracking, { passive: true });
+  window.addEventListener('touchmove', resumeScrollTracking, { passive: true });
+  document.addEventListener('pointerdown', () => {
+    if (!navigationReached) resumeScrollTracking();
+  }, { passive: true });
   window.addEventListener('resize', scheduleUpdate, { passive: true });
   window.addEventListener('hashchange', restoreFragment);
   window.addEventListener('load', restoreFragment, { once: true });
