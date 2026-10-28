@@ -131,6 +131,16 @@
         link.removeAttribute('aria-current');
       }
     }
+
+    // Keep the address in sync without jumping or adding scroll history entries.
+    // Explicit navigation keeps its exact fragment (including abstract deep links).
+    if (!navigationTarget) {
+      const hash = `#${encodeURIComponent(active.id)}`;
+      if (window.location.hash !== hash) {
+        window.history.replaceState(window.history.state, '',
+          window.location.pathname + window.location.search + hash);
+      }
+    }
   }
 
   function scheduleUpdate() {
