@@ -188,6 +188,13 @@ summary::marker { font-size: .75em; }
 .awards-list .recognition-year { padding: 0; white-space: nowrap; }
 #miscellaneous .section-body h3 { color: var(--copper); letter-spacing: .006em; margin: 20px 0 10px; }
 #miscellaneous .section-body h3:first-child { margin-top: 0; }
+/* Inline photo disclosures keep the reader in place. */
+.inline-disclosure { padding: 0; border: 0; background: none; color: var(--teal); font: inherit; white-space: nowrap; cursor: pointer; }
+.inline-disclosure:hover, .inline-disclosure:focus { color: var(--copper-dark); }
+.signature-figure { width: 100%; max-width: 360px; margin: 16px 0 22px; }
+.signature-figure img { display: block; width: 100%; border-radius: 8px; }
+.signature-figure figcaption { margin-top: 8px; color: var(--muted); font-size: 15px; line-height: 1.5; }
+.signature-figure figcaption p:last-child { margin-bottom: 0; }
 .site-footer { border-top: 1px solid var(--line); background: #f8f9fa; }
 .footer-inner { min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .site-footer small, .site-footer a { font-size: .85rem; color: var(--muted); }
@@ -195,6 +202,8 @@ summary::marker { font-size: .75em; }
 
 /* Preserve the original desktop/mobile type scales. */
 @media (min-width: 768px) {
+  .signature-figure:not([hidden]) { display: grid; grid-template-columns: 360px minmax(0, 1fr); align-items: start; gap: 24px; max-width: 760px; }
+  .signature-figure figcaption { margin-top: 0; max-width: 32ch; }
   h2 { font-size: 1.65rem; }
   h3 { font-size: 1.4rem; }
   .lead, .abstract-text { font-size: 17px; }

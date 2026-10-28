@@ -2,6 +2,24 @@
 (() => {
   'use strict';
 
+  // Upgrade inline names into buttons; without JavaScript, the photos stay visible.
+  for (const label of document.querySelectorAll('[data-disclosure-target]')) {
+    const figure = document.getElementById(label.dataset.disclosureTarget);
+    if (!figure) continue;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'inline-disclosure';
+    button.textContent = label.textContent;
+    button.setAttribute('aria-controls', figure.id);
+    button.setAttribute('aria-expanded', 'false');
+    figure.hidden = true;
+    button.addEventListener('click', () => {
+      figure.hidden = !figure.hidden;
+      button.setAttribute('aria-expanded', String(!figure.hidden));
+    });
+    label.replaceWith(button);
+  }
+
   // Keep old index.html bookmarks working while showing the directory URL.
   if (/^https?:$/.test(window.location.protocol) &&
       window.location.pathname.endsWith('/index.html')) {
