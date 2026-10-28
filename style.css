@@ -162,7 +162,7 @@ summary::marker { font-size: .75em; }
 #teaching h3 { margin-bottom: 8px; }
 #teaching h3 + h4.subsection-heading { margin-top: 0; }
 .light-2, .recognition-year { color: var(--muted); font-size: 15px; font-weight: 400; font-variant-numeric: tabular-nums; line-height: 1.45; }
-/* Previous experience uses the same heading and metadata scales as teaching. */
+/* Experience uses the same heading and metadata scales as teaching. */
 .experience-list { display: grid; gap: 24px; }
 .experience-entry h3 { margin-bottom: 6px; }
 .experience-team { margin: 0 0 6px; color: var(--ink); }
