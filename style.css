@@ -7,7 +7,7 @@
   --heading: #3f474c;
   --muted: #666;
   --muted-soft: #777;
-  --teal: #0b8793;
+  --teal: #0b7e89;
   --teal-dark: #08717a;
   --copper: #d96f1f;
   --copper-dark: #b95c18;
@@ -26,7 +26,7 @@
 html { font-size: 90%; scroll-behavior: smooth; scrollbar-gutter: stable; }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1rem/1.5 var(--sans); }
 [id] { scroll-margin-top: calc(var(--header-height) + 16px); }
-::selection { background: rgba(11, 135, 147, .17); color: var(--ink); }
+::selection { background: rgba(11, 126, 137, .17); color: var(--ink); }
 a { color: var(--teal); text-decoration: none; transition: color 150ms ease; }
 a:hover, a:focus { color: var(--copper-dark); text-decoration: none; }
 :focus-visible { outline: 2px solid var(--teal-dark); outline-offset: 3px; border-radius: 3px; }
