@@ -41,6 +41,7 @@
   let navigationTarget = null;
   let navigationReached = false;
   let navigationIdleTimer = null;
+  let activeSectionId = null;
 
   function fragmentTarget(hash) {
     if (!hash || hash === '#') return null;
@@ -140,6 +141,14 @@
         window.history.replaceState(window.history.state, '',
           window.location.pathname + window.location.search + hash);
       }
+    }
+
+    // Share the resolved section, including the parent of an abstract deep link.
+    if (active.id !== activeSectionId) {
+      activeSectionId = active.id;
+      document.dispatchEvent(new CustomEvent('site:sectionchange', {
+        detail: { sectionId: active.id }
+      }));
     }
   }
 
