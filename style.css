@@ -57,7 +57,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 1.5rem 0; }
 .menu-toggle { display: none; font-family: var(--section-font); font-weight: 600; }
 
 /* A compact profile beside the biography; all following sections use the full column. */
-.about-section { display: grid; grid-template-columns: 250px minmax(0, 1fr); column-gap: 40px; padding: 38px 0 30px; align-items: start; }
+.about-section { display: grid; grid-template-columns: 250px minmax(0, 1fr); column-gap: 40px; padding: 32px 0 24px; align-items: start; }
 .profile { min-width: 0; }
 .profile-portrait { display: block; width: 190px; aspect-ratio: 1; object-fit: cover; border-radius: 50%; margin: 0 auto 14px; border: 1px solid rgba(33, 37, 41, .14); box-shadow: 0 12px 26px rgba(33, 37, 41, .1); }
 .profile-name { font-family: var(--sans); font-size: 24px; font-weight: 600; line-height: 1.2; letter-spacing: -.005em; text-align: center; }
@@ -81,12 +81,11 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 1.5rem 0; }
 .profile-social-link i { color: var(--icon); font-size: 2rem; transition: color 150ms ease, transform 150ms ease; }
 .profile-social-link:hover i, .profile-social-link:focus i { color: var(--copper-dark); transform: translateY(-1px); }
 .intro { min-width: 0; }
-.welcome-heading { margin-bottom: 16px; }
 .intro p:last-child { margin-bottom: 0; }
 
 /* Each section begins with its heading, without a sidebar or reserved gutter. */
-.content-section { display: block; padding: 28px 0; border-top: 1px solid var(--line); }
-.welcome-heading, .content-section > h2 { margin-bottom: 18px; color: var(--section-heading); font-family: var(--section-font); font-size: 28px; font-weight: 600; line-height: 1.35; letter-spacing: -.5px; }
+.content-section { display: block; padding: 24px 0; border-top: 1px solid var(--line); }
+.welcome-heading, .content-section > h2 { margin-bottom: 16px; color: var(--section-heading); font-family: var(--section-font); font-size: 28px; font-weight: 600; line-height: 1.35; letter-spacing: -.5px; }
 .section-body { min-width: 0; }
 .section-body > :first-child { margin-top: 0; }
 .section-body > :last-child { margin-bottom: 0; }
@@ -96,7 +95,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 1.5rem 0; }
 
 /* News keeps the original compact scrolling window, separate from page scrolling. */
 .news-window-shell { position: relative; }
-.news-window { max-height: min(var(--news-window-height, 22rem), 60vh); overflow-y: auto; padding-right: 14px; scrollbar-gutter: stable; }
+.news-window { max-height: min(var(--news-window-height, 16rem), 60vh); overflow-y: auto; padding-right: 14px; scrollbar-gutter: stable; }
 .news-window::-webkit-scrollbar { width: 8px; }
 .news-window::-webkit-scrollbar-track { background: var(--nav-surface); border-radius: 4px; }
 .news-window::-webkit-scrollbar-thumb { background: var(--icon); border-radius: 4px; }
@@ -230,15 +229,15 @@ summary::marker { font-size: .75em; }
   .is-menu-open .menu-icon { height: 1px; border-bottom: 0; }
   #site-navigation { flex-wrap: wrap; justify-content: flex-start; width: 100%; gap: 0 1.25rem; padding: .4rem 0 .7rem; }
   .site-header.is-enhanced:not(.is-menu-open) #site-navigation { display: none; }
-  .about-section { display: block; padding: 24px 0; }
-  .profile { max-width: 310px; margin: 0 auto 28px; }
+  .about-section { display: block; padding: 20px 0; }
+  .profile { max-width: 310px; margin: 0 auto 24px; }
   .profile-portrait { width: 160px; }
   .profile-contact { text-align: center; }
   .profile-email > span { white-space: normal; }
   .social-links { justify-content: center; }
   .intro { width: 100%; }
-  .content-section { padding: 24px 0; }
-  .welcome-heading, .content-section > h2 { margin-bottom: 16px; }
+  .content-section { padding: 20px 0; }
+  .welcome-heading, .content-section > h2 { margin-bottom: 14px; }
   .news-list > li { grid-template-columns: 70px minmax(0, 1fr); gap: 10px; padding: 5px 0; }
   .paper-resource, .paper-abstract > summary { min-height: 22px; padding: 0 .5rem; }
   .abstract-text { padding: 12px; }

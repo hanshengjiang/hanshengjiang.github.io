@@ -251,7 +251,7 @@
     scheduleUpdate();
   });
 
-  // Match the original news window to six rows; CSS caps its height on small screens.
+  // Match the news window to four rows; CSS caps its height on small screens.
   const newsWindow = document.querySelector('.news-window');
   const newsList = newsWindow && newsWindow.querySelector('.news-list');
   if (newsList) {
@@ -274,7 +274,7 @@
 
     function sizeNewsWindow() {
       const items = [...newsList.children];
-      const visibleRows = Number(newsWindow.dataset.visibleRows) || 6;
+      const visibleRows = Number(newsWindow.dataset.visibleRows) || 4;
       const last = items[Math.min(visibleRows, items.length) - 1];
       if (!last) return;
       const height = Math.ceil(last.getBoundingClientRect().bottom - newsList.getBoundingClientRect().top);
