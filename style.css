@@ -146,7 +146,6 @@ summary::marker { font-size: .75em; }
 .paper-abstract[open] { flex-basis: 100%; }
 .abstract-text { margin-top: 8px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); box-shadow: 0 8px 28px rgba(33, 37, 41, .07); overflow-wrap: anywhere; }
 .category-note { margin: -4px 0 12px; }
-.service-section { margin-top: 26px; }
 .service-section > h3 { margin-bottom: 8px; }
 .academic-service-list > li + li { margin-top: 20px; }
 .service-heading { margin-bottom: 6px; }
