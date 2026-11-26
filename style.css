@@ -29,6 +29,14 @@ body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1rem/1.
 ::selection { background: rgba(11, 126, 137, .17); color: var(--ink); }
 a { color: var(--teal); text-decoration: none; transition: color 150ms ease; }
 a:hover, a:focus { color: var(--copper-dark); text-decoration: none; }
+/* Underline inline links without changing their size or position. */
+:where(main, .site-footer) a:not(.paper-resource, .profile-social-link, .paper-title-link):is(:hover, :focus-visible),
+.inline-disclosure:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+  text-decoration-skip-ink: auto;
+}
 :focus-visible { outline: 2px solid var(--teal-dark); outline-offset: 3px; border-radius: 3px; }
 main:focus:not(:focus-visible), section:focus:not(:focus-visible), h3:focus:not(:focus-visible), details:focus:not(:focus-visible) { outline: none; }
 button { font: inherit; }
@@ -126,8 +134,9 @@ summary::marker { font-size: .75em; }
 .paper { margin-bottom: 18px; }
 .paper:last-child { margin-bottom: 0; }
 .paper-title { margin: 0 0 2px; font: 500 18px/1.35 var(--sans); letter-spacing: normal; }
-.paper-title-link { color: var(--teal); font: inherit; }
+.paper-title-link { color: var(--teal); font: inherit; border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; transition: color 150ms ease, background-color 150ms ease; }
 .paper-title-link:hover, .paper-title-link:focus { color: var(--copper-dark); }
+.paper-title-link:hover, .paper-title-link:focus-visible { background-color: rgba(217, 111, 31, .09); }
 .paper-authors, .paper-outlet { margin: 0; color: #000; font-family: var(--sans); font-size: 18px; font-weight: 300; line-height: 1.55; font-style: normal; }
 .paper-authors a, .paper-outlet a { color: inherit; font-weight: inherit; }
 .paper-authors a:hover, .paper-authors a:focus, .paper-outlet a:hover, .paper-outlet a:focus { color: var(--copper-dark); }
