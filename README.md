@@ -18,6 +18,10 @@ A responsive, single-page academic website for GitHub Pages. Plain HTML, CSS, an
 
 Keep section IDs and existing abstract IDs stable so bookmarks continue to work. Paper abstracts use native `<details>` and `<summary>` elements. News stays visible in a compact window with its own thin scrollbar, showing four rows when space permits and every update in print. With JavaScript, wheel and touch gestures scroll the page until the reader clicks anywhere in News or enters it with keyboard focus. Clicking or focusing elsewhere, or pressing Escape, returns scrolling to the page; reaching a news-scroll boundary also allows the page to continue. Add new updates to the top of its single list; preserve the `news-archive` bookmark on its existing row. Teaching is followed by Experience and then Personal, with all listed courses visible in compact entries. Experience groups roles by organization, retaining team names and city, state, and country without work descriptions. Group Berkeley courses under the full school or department names. Omit role labels and use subtle spacing between course names and muted course details, without dash separators. Preserve descriptive links, heading order, image alt text, and `rel="noopener noreferrer"` on links that open a new tab.
 
+## CV workspace
+
+The ignored `cv/` workspace is a separate Overleaf checkout with GitHub sync still planned; local setup and PDF-publication notes are in `cv/CV.md` when present and are not included in fresh homepage clones.
+
 ## Preview and check
 
 From this directory, run:

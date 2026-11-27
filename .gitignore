@@ -1,1 +1,4 @@
 files/tmp/
+
+# Local CV workspace; managed separately from the homepage repository.
+/cv/
